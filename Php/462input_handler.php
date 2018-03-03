@@ -149,7 +149,7 @@
             $_SESSION['new_owner_pin']=null;
             $_SESSION['new_owner_email']=null;
             $_SESSION['new_owner_phone']=null;
-            header('Location:Php/index.html.php');
+            header('Location:index.html.php');
           }
         }
       }else{
