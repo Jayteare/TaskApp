@@ -14,7 +14,7 @@
           <span class="title-text">Placeholder Scheduling Solutions</span>
           <br>
           <span class="create-text">Enroll New Company</span>
-          <form action="/462Project/462input_handler.php" method="post">
+          <form action="Php/462input_handler.php" method="post">
             Company Name:<br>
             <input type="text" name="new_company_title" value="<?php echo $_SESSION['new_company_title'] ?>"><br>
             Company PIN:<br>
@@ -57,7 +57,7 @@
         <span class="title-text">Placeholder Scheduling Solutions</span>
         <br>
         <span class="create-text">Create New Company</span>
-        <form action="/462Project/462input_handler.php" method="post">
+        <form action="Php/462input_handler.php" method="post">
           Company Name:<br>
           <input type="text" name="new_company_title"><br>
           Company PIN:<br>
