@@ -24,8 +24,8 @@
           <input type="submit" name="login_submit" value="Submit">
         </form>
         <br>
-        <button class="link-button" onclick="window.location.href='Php/create_new_employee.html.php'">Enroll New Employee</button>
-        <button class="link-button" onclick="window.location.href='Php/create_new_company.html.php'">Enroll New Company</button>
+        <button class="link-button" onclick="window.location.href='/create_new_employee.html.php'">Enroll New Employee</button>
+        <button class="link-button" onclick="window.location.href='create_new_company.html.php'">Enroll New Company</button>
       </div>
     </main>
   </body>
