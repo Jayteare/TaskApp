@@ -16,7 +16,7 @@
     <main class="main-content">
       <div class="content-box">
         <span class="title-text">Placeholder Scheduling Solutions</span>
-        <form action="/462Project/462input_handler.php" method="post">
+        <form action="/Php/462input_handler.php" method="post">
           Username:<br>
           <input type="text" name="username"><br>
           Password:<br>
