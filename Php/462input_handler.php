@@ -25,7 +25,7 @@
         $_SESSION['cur_user'] = $username;
         $_SESSION['fname'] = $row['fname'];
         $_SESSION['lname'] = $row['lname'];
-        header('Location:http://localhost/462Project/employee_homepage.html.php');
+        header('Location:Php/employee_homepage.html.php');
       }else{
         foreach($manresult as $manrow){
           if($manrow['COUNT(*)'] > 0){
@@ -84,7 +84,7 @@
             $_SESSION['new_employee_email']=null;
             $_SESSION['new_employee_phone']=null;
             $_SESSION['employeeCreateErrorMsg']=null;
-    	      header('Location:http://localhost/462Project/index.html.php');
+    	      header('Location:Php/index.html.php');
           }else{
             $_SESSION['employeeCreateErrorMsg']="Your PIN must be valid!";
             header('Location:Php/create_new_employee.html.php');
