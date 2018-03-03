@@ -32,9 +32,9 @@
             $_SESSION['cur_user'] = $username;
             $_SESSION['fname'] = $manrow['fname'];
             $_SESSION['lname'] = $manrow['lname'];
-            header('Location:http://localhost/462Project/manager_homepage.html.php');
+            header('Location:Php/manager_homepage.html.php');
           }else{
-            header('Location:http://localhost/462Project/index.html.php');
+            header('Location:Php/index.html.php');
           }
         }
       }
@@ -87,12 +87,12 @@
     	      header('Location:http://localhost/462Project/index.html.php');
           }else{
             $_SESSION['employeeCreateErrorMsg']="Your PIN must be valid!";
-            header('Location:http://localhost/462Project/create_new_employee.html.php');
+            header('Location:Php/create_new_employee.html.php');
           }
         }
       }else{
         $_SESSION['employeeCreateErrorMsg']="Your Username must be unique!";
-        header('Location:http://localhost/462Project/create_new_employee.html.php');
+        header('Location:Php/create_new_employee.html.php');
       }
     }
   }
@@ -130,7 +130,7 @@
         foreach($result as $row){
           if($row['COUNT(*)'] > 0){
             $_SESSION['companyCreateErrorMsg']="Your company PIN must be unique!";
-            header('Location:http://localhost/462Project/create_new_company.html.php');
+            header('Location:Php/create_new_company.html.php');
           }else{
             $query = "INSERT INTO company VALUES ('".$_SESSION['new_company_pin']."', '".$_SESSION['new_company_title']."', '".$_SESSION['new_owner_fullname']."')";
             $stmt = $db->prepare($query);
@@ -149,12 +149,12 @@
             $_SESSION['new_owner_pin']=null;
             $_SESSION['new_owner_email']=null;
             $_SESSION['new_owner_phone']=null;
-            header('Location:http://localhost/462Project/index.html.php');
+            header('Location:Php/index.html.php');
           }
         }
       }else{
         $_SESSION['companyCreateErrorMsg']="Your company name must be unique!";
-        header('Location:http://localhost/462Project/create_new_company.html.php');
+        header('Location:Php/create_new_company.html.php');
       }
     }
   }
