@@ -130,7 +130,7 @@
         foreach($result as $row){
           if($row['COUNT(*)'] > 0){
             $_SESSION['companyCreateErrorMsg']="Your company PIN must be unique!";
-            header('Location:create_new_company.html.php');
+            header('create_new_company.html.php');
           }else{
             $query = "INSERT INTO company VALUES ('".$_SESSION['new_company_pin']."', '".$_SESSION['new_company_title']."', '".$_SESSION['new_owner_fullname']."')";
             $stmt = $db->prepare($query);
@@ -154,7 +154,7 @@
         }
       }else{
         $_SESSION['companyCreateErrorMsg']="Your company name must be unique!";
-        header('Location:create_new_company.html.php');
+        header('create_new_company.html.php');
       }
     }
   }
