@@ -45,13 +45,9 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
 					<li><a href="#" data-nav-section="services"><span>Services</span></a></li>
-					<li><a href="#" data-nav-section="explore"><span>Project</span></a></li>
-					<li><a href="#" data-nav-section="testimony"><span>Testimony</span></a></li>
-					<li><a href="#" data-nav-section="pricing"><span>Pricing</span></a></li>
 					<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
-					<li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
 					<li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
-					<li class="call-to-action"><a class="sign-up" href="#"><span>Register</span></a></li>
+					<li class="call-to-action"><a class="sign-up" href="registration.html.php"><span>Register</span></a></li>
 					<li class="call-to-action"><a class="log-in" href="#"><span>Login</span></a></li>
 				</ul>
 			</div>
