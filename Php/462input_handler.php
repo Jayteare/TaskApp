@@ -26,7 +26,7 @@
         $_SESSION['fname'] = $row['fname'];
         $_SESSION['lname'] = $row['lname'];
         $_SESSION['company_id'] = $row['company_pin'];
-        header('Location:employee_newshift.html.php');
+        header('Location:employee_homepage.html.php');
       }else{
         foreach($manresult as $manrow){
           if($manrow['COUNT(*)'] > 0){
@@ -34,7 +34,7 @@
             $_SESSION['fname'] = $manrow['fname'];
             $_SESSION['lname'] = $manrow['lname'];
             $_SESSION['lname'] = $row['lname'];
-            header('manager_homepage.html.php');
+            header('Location:manager_homepage.html.php');
           }else{
             header('index.html.php');
           }
