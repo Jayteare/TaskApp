@@ -48,7 +48,7 @@
 					<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
 					<li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
 					<li class="call-to-action"><a class="sign-up" href="registration.html.php"><span>Register</span></a></li>
-					<li class="call-to-action"><a class="log-in" href="index.html.login"><span>Login</span></a></li>
+					<li class="call-to-action"><a class="log-in" href="index.html.login.php"><span>Login</span></a></li>
 				</ul>
 			</div>
 		</nav>
