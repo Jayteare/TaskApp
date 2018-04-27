@@ -26,7 +26,7 @@
         $_SESSION['fname'] = $row['fname'];
         $_SESSION['lname'] = $row['lname'];
         $_SESSION['company_id'] = $row['company_pin'];
-        header('Location:http://localhost/462Project/employee_newshift.html.php');
+        header('Location:employee_newshift.html.php');
       }else{
         foreach($manresult as $manrow){
           if($manrow['COUNT(*)'] > 0){
@@ -86,15 +86,15 @@
             $_SESSION['new_employee_email']=null;
             $_SESSION['new_employee_phone']=null;
             $_SESSION['employeeCreateErrorMsg']=null;
-    	      header('Location:http://localhost/462Project/index.html.php');
+    	      header('Location:index.html.php');
           }else{
             $_SESSION['employeeCreateErrorMsg']="Your PIN must be valid!";
-            header('Location:http://localhost/462Project/create_new_employee.html.php');
+            header('Location:create_new_employee.html.php');
           }
         }
       }else{
         $_SESSION['employeeCreateErrorMsg']="Your Username must be unique!";
-        header('Location:http://localhost/462Project/create_new_employee.html.php');
+        header('Location:create_new_employee.html.php');
       }
     }
   }
@@ -133,7 +133,7 @@
         foreach($result as $row){
           if($row['COUNT(*)'] > 0){
             $_SESSION['companyCreateErrorMsg']="Your company PIN must be unique!";
-            header('Location:http://localhost/462Project/create_new_company.html.php');
+            header('Location:create_new_company.html.php');
           }else{
             /*
               These two queries create an entry in the company table and the owners table upon valid
@@ -155,12 +155,12 @@
             $_SESSION['new_owner_pin']=null;
             $_SESSION['new_owner_email']=null;
             $_SESSION['new_owner_phone']=null;
-            header('Location:http://localhost/462Project/index.html.php');
+            header('Location:index.html.php');
           }
         }
       }else{
         $_SESSION['companyCreateErrorMsg']="Your company name must be unique!";
-        header('Location:http://localhost/462Project/create_new_company.html.php');
+        header('Location:create_new_company.html.php');
       }
     }
   }
@@ -175,11 +175,11 @@
     $stmt = $db->prepare($query);
     $stmt->execute();
     $_SESSION['shift_enroll_id'] = null;
-    header('Location:http://localhost/462Project/employee_newshift.html.php');
+    header('Location:http:employee_newshift.html.php');
   }
   //Stores a selected datein $_SESSION for use in shiftlokup.php after employee_newshift.html.php is reached
   if(isset($_POST['shift_date_submit'])){
     $_SESSION['shift_date_display'] = $_POST['shift_date_range'];
-    header('Location:http://localhost/462Project/employee_newshift.html.php');
+    header('Location:employee_newshift.html.php');
   }
 ?>
