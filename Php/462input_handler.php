@@ -2,8 +2,10 @@
   session_start();
   include 'initiate_db.php';
   //Activated when Login button is pressed on index.html.php
-  if(isset($_POST['login_submit'])){
-    $username=$_POST['username'];
+  if(isset($_POST['login_submit']))
+  {
+    echo"Bob";
+	$username=$_POST['username'];
     $password=$_POST['password'];
     //Query to check if User/Pass combo is in Employee table
     $query = "SELECT COUNT(*), username, password, fname, lname, company_pin FROM (SELECT username, password, fname, lname, company_pin FROM employees WHERE username = '".$username."' && password = '".$password."') AS x";
