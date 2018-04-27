@@ -1,6 +1,6 @@
 <?php
 //Configure DB Information
-define("HOST", "us-cdbr-iron-east-05.cleardb.net");
+define("HOST", "us-cdbr-iron-east-05.cleardb.net:3306");
 define("USER", "b52e20d0f5da46");
 define("PASS", "fc4f25b0");
 define("NAME", "CLEARDB_DATABASE_URL");
