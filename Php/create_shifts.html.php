@@ -37,7 +37,7 @@ $result = mysqli_query($conn, "SELECT * FROM shifts");
             echo "<td>".$res['starttime']."</td>";    
             echo "<td>".$res['endtime']."</td>";  
             echo "<td>".$res['numreq']."</td>";			
-            echo "<td><a href=\"edit_shift.php?shiftid=$res[shiftid]\">Edit</a> | <a href=\"delete_shift.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
+            echo "<td><a href=\"edit_shift.html.php?shiftid=$res[shiftid]\">Edit</a> | <a href=\"delete_shift.html.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
 			echo "</tr>";
 		}
         ?>
