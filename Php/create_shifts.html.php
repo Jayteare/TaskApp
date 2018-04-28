@@ -25,7 +25,7 @@ $result = mysqli_query($conn, "SELECT * FROM shifts");
             <th>End Time</th>
 	    <th># Shifts </th>
 	    <td><a href="add_shift.html">Add New Shift</a></td>
-	    <td><a href="manager_homepage.html.php">Add New Shift</a></td>
+	    <td><a href="manager_homepage.html.php">Home</a></td>
 
         </tr>
 		
