@@ -51,7 +51,7 @@
 			<div class="column">
 			</div>
 			</a>
-			<a href="create_new_company.html.php" class="button"> TaskApp - Company Registration
+			<a href="create_new_employee.html.php" class="button"> TaskApp - Company Registration
 			<div class="column">
 			</div>
 			</a>
