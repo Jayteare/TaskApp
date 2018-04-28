@@ -13,9 +13,8 @@ if(isset($_POST['request_submit'])){
   $startShift = $_POST['Start_Shift'];
   $endShift = $_POST['End_Shift'];
   $reason = $_POST['reason'];
-
-  $db = new mysqli('localhost', 'root', '', '462_schedule_project');
-
+  
+  $db = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
 
   $query = "INSERT INTO prerequest (Shift_ID, userName, MFName,MLName,EFName,ELName,StartShift,EndShift, Reason, Status)
   VALUES (?,?,?,?,?,?,?,?,?,?)";
@@ -43,7 +42,7 @@ if(isset($_POST['request_submit'])){
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="stylesheets/request.css">
+<link rel="stylesheet" href="css/css/request.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
