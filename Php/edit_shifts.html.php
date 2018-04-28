@@ -59,10 +59,10 @@ while($res = mysqli_fetch_array($result))
 </head>
  
 <body>
-    <a href="create_shifts.php">Home</a>
+    <a href="create_shifts.html.php">Home</a>
     <br/><br/>
     
-    <form name="form1" method="post" action="edit_shift.php">
+    <form name="form1" method="post" action="edit_shift.html.php">
         <table border="0">
             <tr> 
                 <td>Day</td>
