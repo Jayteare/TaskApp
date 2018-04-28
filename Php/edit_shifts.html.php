@@ -34,7 +34,7 @@ if(isset($_POST['update']))
         $result = mysqli_query($conn, "UPDATE shifts SET day='$day',starttime='$starttime',endtime='$endtime',numreq='$numreq'  WHERE shiftid=$shiftid");
         
         //redirectig to the display page. In our case
-        header("Location: create_shifts.php");
+        header("Location: create_shifts.html.php");
     }
 }
 ?>
