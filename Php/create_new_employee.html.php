@@ -12,17 +12,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-			<!-- Animate.css -->
-	<link rel="stylesheet" href="css/css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/css/icomoon.css">
-	<!-- Simple Line Icons -->
-	<link rel="stylesheet" href="css/css/simple-line-icons.css">
-	<!-- Bootstrap  -->
+		<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/css/bootstrap.css">
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Style -->
 	<link rel="stylesheet" href="css/css/style.css">
 	</head>
@@ -42,7 +33,7 @@
 					<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
 					<li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
 					<li class="call-to-action"><a class="sign-up" href="registration.html.php"><span>Register</span></a></li>
-					<li class="call-to-action"><a class="log-in" href="index.html.login"><span>Login</span></a></li>
+					<li class="call-to-action"><a class="log-in" href="index.html.login.php"><span>Login</span></a></li>
 				</ul>
 			</div>
 		</nav>
