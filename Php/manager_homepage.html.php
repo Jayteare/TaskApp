@@ -56,28 +56,11 @@
 <div id = "wrapper" align="center">
 <div id = "navMenue">
 <ul>
-<li> <a href="create_shifts.html.php">Create Shifts</a>
-<li> <a href="assign_shifts.html.php">Assign Shifts</a>
-<li> <a href="view_schedule.html.php">View Weekly Schedule</a>
-<li> <a href="check_hours.html.php">Check Pay/Hours</a>
-<li> <a href="dayoff_request.html.php" >Approve Day Off</a>
-<li> <a href="manager_availability.html.php">Set Availability</a>
-
+<li> <a href="create_shifts.php">Create Shifts</a>
+<li> <a href="assign_shifts.php">Assign Shifts</a>
+<li> <a href="view_schedule.php">View Weekly Schedule</a>
+<li> <a href="dayoff_request.php" >Approve Day Off</a>
 </ul>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-
 
 </body>
 </html>
