@@ -57,7 +57,7 @@
 <div id = "navMenue">
 <ul>
 <li> <a href="create_shifts.html.php">Create Shifts</a>
-<li> <a href="manager_assign_shifts.html">Assign Shifts</a>
+<li> <a href="manager_assign_shifts.html.php">Assign Shifts</a>
 <li> <a href="view_schedule.html.php">View Weekly Schedule</a>
 <li> <a href="manager_day_off.html.php" >Approve Day Off</a>
 </ul>
