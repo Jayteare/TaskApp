@@ -13,9 +13,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 		<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<!-- Style -->
-	<link rel="stylesheet" href="css/css/style.css">
+	
 	</head>
 	
 	<header role="banner" id="fh5co-header">
