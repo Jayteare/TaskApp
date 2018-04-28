@@ -1,7 +1,7 @@
 <?php
 
 //including the database connection file
-include("connect-db.php");
+include("initiate_db.php");
  
 //getting id of the data from url
 $shiftid = $_GET['shiftid'];
