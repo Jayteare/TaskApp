@@ -1,7 +1,7 @@
 
 <?php
 //including the database connection file
-include_once("connect-db.php");
+include_once("initiate_db.php");
  
 
 $result = mysqli_query($conn, "SELECT * FROM shifts"); 
