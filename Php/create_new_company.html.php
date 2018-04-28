@@ -12,8 +12,42 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/css/icomoon.css">
+		<!-- Simple Line Icons -->
+		<link rel="stylesheet" href="css/css/simple-line-icons.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/css/bootstrap.css">
+		<!-- Owl Carousel  -->
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<!-- Style -->
+		<link rel="stylesheet" href="css/css/style.css">
 	</head>
+	
+<header role="banner" id="fh5co-header">
+	<div class="fluid-container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="" href="#">TaskerApp</a> 
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+					<li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+					<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
+					<li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
+					<li class="call-to-action"><a class="sign-up" href="registration.html.php"><span>Register</span></a></li>
+					<li class="call-to-action"><a class="log-in" href="index.html.login"><span>Login</span></a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
 	<body>
 		<form action="462input_handler.php" method="post" style="border:1px solid #ccc">
 			<div class="row">
@@ -29,13 +63,22 @@
 					<label for="company-pin"><b>Company PIN</b></label>
 					<input type="text" placeholder="Enter Company PIN" name="new_company_pin" required>
 					
-					<label for="company-manager"><b>Company Account Manager</b></label>
-					<input type="text" placeholder="Enter Company Manager" name="new_owner_username" required>
+					<label for="company-manager"><b>Company Account Manager Username</b></label>
+					<input type="text" placeholder="Enter Manager Username" name="new_owner_username" required>
 					
-					<label for="email"><b>Email</b></label>
-					<input type="text" placeholder="Enter Email" name="email" required>
+					<label for="company-manager-fname"><b>Company Account Manager First Name</b></label>
+					<input type="text" placeholder="Enter Company Manager First Name" name="new_owner_fname" required>
+					
+					<label for="company-manager-lname"><b>Company Account Manager Last Name</b></label>
+					<input type="text" placeholder="Enter Company Manager Last Name" name="new_owner_lname" required>
+					
+					<label for="company-manager-email"><b>Company Account Manager Email</b></label>
+					<input type="text" placeholder="Enter Email" name="new_owner_email" required>
+					
+					<label for="company-manager-phone"><b>Company Account Manager Phonenumber</b></label>
+					<input type="text" placeholder="Enter Company Manager Last Name" name="new_owner_phone" required>
 
-					<label for="psw"><b>Password</b></label>
+					<label for="psw"><b>Enter Password</b></label>
 					<input type="password" placeholder="Enter Password" name="new_owner_password" required>
 
 					<label for="psw-repeat"><b>Repeat Password</b></label>
