@@ -23,7 +23,6 @@ $result = mysqli_query($conn, "SELECT * FROM shifts");
             <th>Day</th>
             <th>Starting Time</th>
             <th>End Time</th>
-			<th>Priority</th>
 			<th># Shifts </th>
 			<td><a href="add_shift.html">Add New Shift</a></td>
 
@@ -37,8 +36,7 @@ $result = mysqli_query($conn, "SELECT * FROM shifts");
             echo "<td>".$res['day']."</td>";
             echo "<td>".$res['starttime']."</td>";    
             echo "<td>".$res['endtime']."</td>";  
-            echo "<td>".$res['priority']."</td>"; 
-			echo "<td>".$res['numreq']."</td>";			
+            echo "<td>".$res['numreq']."</td>";			
             echo "<td><a href=\"edit_shift.php?shiftid=$res[shiftid]\">Edit</a> | <a href=\"delete_shift.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
 			echo "</tr>";
 		}
