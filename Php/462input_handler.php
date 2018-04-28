@@ -4,7 +4,6 @@
   //Activated when Login button is pressed on index.html.php
   if(isset($_POST['login_submit']))
   {
-    echo"Bob";
 	$username=$_POST['username'];
     $password=$_POST['password'];
     //Query to check if User/Pass combo is in Employee table
@@ -38,7 +37,7 @@
             $_SESSION['lname'] = $row['lname'];
             header('Location:manager_homepage.html.php');
           }else{
-            header('index.html.php');
+            header('Location:index.html.php');
           }
         }
       }

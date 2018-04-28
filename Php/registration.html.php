@@ -40,18 +40,18 @@
 	<a href="#contact">Contact</a>
 	<a href="#about">Documentation</a>
 	<div class="authentication-right">
-		<a href="http://google.com" class="button">Login</a>
-		<a href="create_new_company.html.php" class="button">Register</a>
+		<a href="index.login.html.php" class="button">Login</a>
+		<a href="registration.html.php" class="button">Register</a>
 	</div>
 			
 </div>
 	<body>
 		<div class="row">
-			<a href="create_new_company.html.php" class="button"> TaskApp - Employee Registration
+			<a href="create_new_company.html.php" class="button"> TaskApp - Company Registration
 			<div class="column">
 			</div>
 			</a>
-			<a href="create_new_employee.html.php" class="button"> TaskApp - Company Registration
+			<a href="create_new_employee.html.php" class="button"> TaskApp - Employee Registration
 			<div class="column">
 			</div>
 			</a>
