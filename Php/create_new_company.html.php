@@ -15,9 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	</head>
 	<body>
-	<?php
-      if(isset($_SESSION['companyCreateErrorMsg'])){ //Displays when 462input_handler.php detects an invalid submission
-    ?>
 		<form action="462input_handler.php" method="post" style="border:1px solid #ccc">
 			<div class="row">
 				<div class="column">
@@ -57,6 +54,5 @@
 			</div>
 		</div>
 	</form>
-	<?php } ?>
 	</body>
 </html>
