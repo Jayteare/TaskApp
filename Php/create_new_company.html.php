@@ -15,7 +15,10 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	</head>
 	<body>
-		<form action="462input_handler.php" style="border:1px solid #ccc">
+	<?php
+      if(isset($_SESSION['companyCreateErrorMsg'])){ //Displays when 462input_handler.php detects an invalid submission
+    ?>
+		<form action="462input_handler.php" method="post" style="border:1px solid #ccc">
 			<div class="row">
 				<div class="column">
 					<h1>Sign Up</h1>
@@ -24,19 +27,19 @@
 				<div class="column">
 				
 					<label for="company-title"><b>Company Title</b></label>
-					<input type="text" placeholder="Enter Company Title" name="cmptitle" required>
+					<input type="text" placeholder="Enter Company Title" name="new_company_title" required>
 					
 					<label for="company-pin"><b>Company PIN</b></label>
-					<input type="text" placeholder="Enter Company PIN" name="cmptitle" required>
+					<input type="text" placeholder="Enter Company PIN" name="new_company_pin" required>
 					
-					<label for="company-pin"><b>Company Account Manager</b></label>
-					<input type="text" placeholder="Enter Company Manager" name="cmpmng" required>
+					<label for="company-manager"><b>Company Account Manager</b></label>
+					<input type="text" placeholder="Enter Company Manager" name="new_owner_username" required>
 					
 					<label for="email"><b>Email</b></label>
 					<input type="text" placeholder="Enter Email" name="email" required>
 
 					<label for="psw"><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" name="psw" required>
+					<input type="password" placeholder="Enter Password" name="new_owner_password" required>
 
 					<label for="psw-repeat"><b>Repeat Password</b></label>
 					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
@@ -48,11 +51,12 @@
 
 					<div class="clearfix">
 						<button type="button" class="cancelbtn">Cancel</button>
-						<button type="submit" class="signupbtn">Sign Up</button>
+						<button type="submit" name="create_company_submit" class="signupbtn">Sign Up</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</form>
+	<?php } ?>
 	</body>
 </html>
