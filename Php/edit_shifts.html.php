@@ -1,6 +1,6 @@
 <?php
 // including the database connection file
-include_once("connect-db.php");
+include_once("initiate_db.php");
  
 if(isset($_POST['update']))
 {    
