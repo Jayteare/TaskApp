@@ -1,5 +1,45 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php session_start(); 
+$fname =  $_SESSION['fname'];
+$lname =  $_SESSION['lname'];
+$username =   $_SESSION['cur_user'];
+
+
+if(isset($_POST['request_submit'])){
+  $shift_ID = $_POST['Shift_ID'];
+  $manager_first_name = $_POST['manager_first_name'];
+  $manager_last_name = $_POST['manager_last_name'];
+
+  $startShift = $_POST['Start_Shift'];
+  $endShift = $_POST['End_Shift'];
+  $reason = $_POST['reason'];
+
+  $db = new mysqli('localhost', 'root', '', '462_schedule_project');
+
+
+  $query = "INSERT INTO prerequest (Shift_ID, userName, MFName,MLName,EFName,ELName,StartShift,EndShift, Reason, Status)
+  VALUES (?,?,?,?,?,?,?,?,?,?)";
+  $stmt = $db->prepare($query);
+
+//  if(mysqli_connect_erro()){
+  //  echo "Error: could not connect to database.";
+//  }
+  $stmt->bind_param('dsssssssss',
+  $shift_ID,
+  $username,
+  $manager_first_name,
+  $manager_last_name ,
+  $fname,
+  $lname,
+  $startShift ,
+  $endShift,
+  $reason,
+  $Status = "Pending");
+  $stmt->execute();
+  header('Location:https://taskingapplication.herokuapp.com/Php/employee_homepage.html.php');
+}
+
+?>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -97,6 +137,43 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
            </div>
          </div>
           </div>
+         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Request day off</button>
+           <div id="id01" class="modal">
+               <form class="modal-content animate" action="" method = "post">
+                   <div class="container">
+                       <table style = "width:80%" border="0">
+                           <tr>
+                               <td><label for="Shift_ID"><b>Shift_ID  </b></label></td>
+                               <td><input type="text" placeholder="Enter the shift ID" name="Shift_ID" required></td>
+                           </tr>
+                           <tr>
+                               <td><label for = "mangerfirstname"> <b>Manager first name </b> </label></td>
+                               <td><input type = "text" placeholder = "Enter manager first name" name = "manager_first_name" required></td>
+                           </tr>
+
+                           <tr>
+                               <td><label for = "mangerlastname"> <b>Manager last name </b> </label></td>
+                               <td><input type = "text" placeholder = "Enter manager last name" name = "manager_last_name" required></td>
+                           </tr>
+                           <tr>
+            <td><label for = "StartShift"> <b>Start shift </b> </label></td>
+            <td><input type = "time"  name = "Start_Shift" required></td>
+          </tr>
+          <tr>
+            <td><label for = "EndShift"> <b>End shift </b> </label></td>
+            <td><input type = "time"  name = "End_Shift" required></td>
+          </tr>
+          <tr>
+            <td><label for="Reason"><b>Reason  </b></label></td>
+            <td><input type="text" placeholder="Enter a reason to be off" name="reason" required></td>
+          </tr>
+        </table>
+          <button type="submit" name ="request_submit">Submit</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </form>
+    </div>
         </div>      
       </div>
       <br>
