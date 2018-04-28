@@ -15,7 +15,6 @@
 		<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/css/bootstrap.css">
 	<!-- Style -->
-	<link rel="stylesheet" href="css/css/style.css">
 	</head>
 	
 	<header role="banner" id="fh5co-header">
