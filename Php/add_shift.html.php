@@ -12,11 +12,10 @@ if(isset($_POST['Submit'])) {
 	$day=$_POST['day'];
 	$starttime=$_POST['starttime'];
 	$endtime=$_POST['endtime'];
-	$priority=$_POST['priority'];
 	$numreq=$_POST['numreq'];
         
     // checking empty fields
-    if(empty($day) || empty($starttime) || empty($endtime) || empty($priority)|| empty($numreq)) {                
+    if(empty($day) || empty($starttime) || empty($endtime) || empty($numreq)) {                
                 
         if(empty($day)) {
             echo "<font color='red'>Day field is empty.</font><br/>";
@@ -30,10 +29,6 @@ if(isset($_POST['Submit'])) {
             echo "<font color='red'>End time field is empty.</font><br/>";
         }
 		
-		if(empty($priority)) {
-            echo "<font color='red'>Priority field is empty.</font><br/>";
-        }
-		
 		if(empty($numreq)) {
             echo "<font color='red'>Number of available Shits field is empty.</font><br/>";
         }
@@ -43,7 +38,7 @@ if(isset($_POST['Submit'])) {
     } else { 
         // if all the fields are filled (not empty)             
         //insert data to database
-        $result = mysqli_query($conn, "INSERT INTO shifts(day,starttime,endtime,priority,numreq) VALUES('$day','$starttime','$endtime','$priority','$numreq')");
+        $result = mysqli_query($conn, "INSERT INTO shifts(day,starttime,endtime,numreq) VALUES('$day','$starttime','$endtime','$numreq')");
         
         //display success message
         echo "<font color='green'>Data Added Successfully.";
