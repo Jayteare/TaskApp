@@ -5,7 +5,7 @@
 	$username = "root";
 	$password = "";
 	//Create connection
-	$conn = new mysqli($servername, $username, $password);
+	$conn = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
 	//Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
