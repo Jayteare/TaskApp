@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-<?php session_start(); ?>
-  <head>
-    <meta charset="utf-8">
+	<?php session_start(); ?>
+	<head>
 		<meta charset="utf-8">
 		<!--  App Title  -->
 		<title>TaskApp - Free Tasking Application</title>
@@ -14,76 +13,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-    <title>Create New Employee</title>
-  </head>
-  <body>
-    <?php if(isset($_SESSION['employeeCreateErrorMsg'])){ //Displays when 462input_handler.php detects an incorrect PIN was entered ?>
-      <main class="main-content">
-        <div class="content-box">
- 		<form action="462input_handler.php" style="border:1px solid #ccc" method="POST">
+	</head>
+	<body>
+		<form action="462input_handler.php" method="post" style="border:1px solid #ccc">
 			<div class="row">
 				<div class="column">
 					<h1>Sign Up</h1>
 					<p>Please fill in this form to create an account.</p>
 				</div>
 				<div class="column">
-            Username:<br>
-            <input type="text" name="new_employee_username" value="<?php $_SESSION['new_employee_username'] ?>"><br>
-            Password:<br>
-            <input type="text" name="new_employee_password" value="<?php  $_SESSION['new_employee_password'] ?>" ><br>
-            First Name:<br>
-            <input type="text" name="new_employee_fname" value="<?php $_SESSION['new_employee_fname'] ?>"><br>
-            Last Name:<br>
-            <input type="text" name="new_employee_lname" value="<?php $_SESSION['new_employee_lname'] ?>"><br>
-            Company PIN:<br>
-            <input type="text" name="new_employee_pin" value="<?php $_SESSION['new_employee_pin'] ?>"><br>
-            Email:<br>
-            <input type="text" name="new_employee_email" value="<?php $_SESSION['new_employee_email'] ?>"><br>
-            Phone Number:<br>
-            <input type="text" name="new_employee_phone" value="<?php $_SESSION['new_employee_phone'] ?>"><br><br>
-            <input type="submit" name="create_employee_submit" value="Submit">
-          </form>
-        </div>
-      </main>
-    <?php
-      echo '<script type="js">
-              alert("'.$_SESSION['employeeCreateErrorMsg'].'");
-            </script>';
-      $_SESSION['new_employee_username']=null;
-      $_SESSION['new_employee_password']=null;
-      $_SESSION['new_employee_fname']=null;
-      $_SESSION['new_employee_lname']=null;
-      $_SESSION['new_employee_pin']=null;
-      $_SESSION['new_employee_email']=null;
-      $_SESSION['new_employee_phone']=null;
-      $_SESSION['employeeCreateErrorMsg']=null;
-    }else{
-    ?>
-    <!-- Default screen displayed. -->
-    <main class="main-content">
-      <div class="content-box">
-        <span class="title-text">Placeholder Scheduling Solutions</span>
-        <br>
-        <span class="create-text">Create New Employee</span>
-        <form action="/462input_handler.php" method="post">
-          Username:<br>
-          <input type="text" name="new_employee_username"><br>
-          Password:<br>
-          <input type="text" name="new_employee_password"><br>
-          First Name:<br>
-          <input type="text" name="new_employee_fname"><br>
-          Last Name:<br>
-          <input type="text" name="new_employee_lname"><br>
-          Company PIN:<br>
-          <input type="text" name="new_employee_pin"><br>
-          Email:<br>
-          <input type="text" name="new_employee_email"><br>
-          Phone Number:<br>
-          <input type="text" name="new_employee_phone"><br><br>
-          <input type="submit" name="create_employee_submit" value="Submit">
-        </form>
-      </div>
-    </main>
-  <?php } ?>
-  </body>
+				
+					<label for="company-title"><b>Employee Username</b></label>
+					<input type="text" placeholder="Enter Username" name="new_employee_username" required>
+					
+					<label for="company-pin"><b>Company PIN</b></label>
+					<input type="text" placeholder="Enter Company PIN" name="new_employee_pin" required>
+					
+					<label for="company-manager"><b>Employee Firstname</b></label>
+					<input type="text" placeholder="Enter First Name" name="new_employee_fname" required>
+					
+					<label for="email"><b>User Email</b></label>
+					<input type="text" placeholder="Enter Email" name="new_employee_email" required>
+
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="new_employee_password" required>
+
+					<label for="psw-repeat"><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+					
+					<label for="lastname"><b>Employee Lastname</b></label>
+					<input type="text" placeholder="Repeat Password" name="new_employee_lname" required>
+					
+					<label>
+						<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+					</label>
+					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+					<div class="clearfix">
+						<button type="button" class="cancelbtn">Cancel</button>
+						<button type="submit" name="create_employee_submit" class="signupbtn">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	</body>
 </html>
