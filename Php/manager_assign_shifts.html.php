@@ -112,13 +112,6 @@
 	}
 
 	$conn->close();
-	/*
-	echo $shiftidarray[$size-1];
-	echo $empidarray[$size-1];
-	echo $empfnamearray[$size-1];
-	echo $emplnamearray[$size-1];
-	echo $size;
-	*/
 
 	?>
 	<br>
@@ -127,7 +120,7 @@
 		<input type="submit" value="Confirm">
 	</form>
 
-	<form action = "manager_homepage.php" >
+	<form action = "manager_homepage.html.php" >
 		<input type="submit" value="Main Menu">
 	</form>
 
