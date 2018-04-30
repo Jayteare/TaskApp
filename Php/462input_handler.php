@@ -17,7 +17,7 @@
     $manstmt->execute();
     $manresult = $manstmt->fetchAll();
 
-    $ownerquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
+    $ownerquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM owners WHERE username = '".$username."' && password = '".$password."') AS x";
     $ownerstmt = $db->prepare($ownerquery);
     $ownerstmt->execute();
     $ownerresult = $ownerstmt->fetchAll();
