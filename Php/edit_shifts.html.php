@@ -2,7 +2,7 @@
   // including the database connection file
   include("initiate_db.php");
   //getting id from url
-  $idshift = $_GET['shiftid'];
+  $idshift = $_GET['idshift'];
   //selecting data associated with this particular id
   $query = "SELECT * FROM shifts WHERE idshift=$idshift";
   $stmt = $db->prepare($query);
