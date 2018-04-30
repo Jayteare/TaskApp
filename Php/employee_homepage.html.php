@@ -124,7 +124,7 @@
                   </div>
                 </div>
               </div>
-              <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Request day off</button>
+              <button onclick="document.getElementById('id01').style.display='block'"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Request day off</button>
               <div id="id01" class="modal">
                 <form class="modal-content animate" action="" method = "post">
                   <div class="container">
@@ -154,15 +154,16 @@
                         <td><input type="text" placeholder="Enter reason..." name="reason" required></td>
                       </tr>
                     </table>
-                    <button type="submit" name ="request_submit">Submit</button>
+                    <button type="submit" class= "submitbtn" name ="request_submit">Submit</button>
                   </div>
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                   </div>
                 </form>
               </div>
-            </div>
-            <br>
+        </div>      
+      </div>
+      <br>
             <!-- Interests -->
             <div class="w3-card w3-round w3-white w3-hide-small">
               <div class="w3-container">
