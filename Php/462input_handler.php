@@ -12,7 +12,7 @@
     $stmt->execute();
     $result = $stmt->fetchAll();
     //Query to check if User/Pass combo is in Manager table
-    $manquery = "SELECT COUNT(*), username, password, fname, lname FROM (SELECT username, password, fname, lname FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
+    $manquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
     $manstmt = $db->prepare($manquery);
     $manstmt->execute();
     $manresult = $manstmt->fetchAll();
@@ -35,6 +35,7 @@
             $_SESSION['fname'] = $manrow['fname'];
             $_SESSION['lname'] = $manrow['lname'];
             $_SESSION['lname'] = $row['lname'];
+            $_SESSION['company_id'] = $row['company_id'];
             header('Location:manager_homepage.html.php');
           }else{
             header('Location:index.html.php');
@@ -190,7 +191,10 @@
   	$endtime=$_POST['endtime'];
   	$numreq=$_POST['numreq'];
 
-    $result = mysqli_query($conn, "INSERT INTO shifts(day,starttime,endtime,numreq) VALUES('$day','$starttime','$endtime','$numreq')");
+    $query = "INSERT INTO created_shifts VALUES(default, '".$_SESSION['company_id']."''".$day."','".$starttime."','".$endtime."','".$numreq."')";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+
     header('Location:create_shifts.html.php');
   }
 ?>
