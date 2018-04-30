@@ -4,41 +4,58 @@
   //Activated when Login button is pressed on index.html.php
   if(isset($_POST['login_submit']))
   {
-	$username=$_POST['username'];
+	  $username=$_POST['username'];
     $password=$_POST['password'];
     //Query to check if User/Pass combo is in Employee table
-    $query = "SELECT COUNT(*), username, password, fname, lname, company_pin FROM (SELECT username, password, fname, lname, company_pin FROM employees WHERE username = '".$username."' && password = '".$password."') AS x";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
+    $empquery = "SELECT COUNT(*), username, password, fname, lname, company_pin FROM (SELECT username, password, fname, lname, company_pin FROM employees WHERE username = '".$username."' && password = '".$password."') AS x";
+    $empstmt = $db->prepare($empquery);
+    $empstmt->execute();
+    $empresult = $empstmt->fetchAll();
     //Query to check if User/Pass combo is in Manager table
     $manquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
     $manstmt = $db->prepare($manquery);
     $manstmt->execute();
     $manresult = $manstmt->fetchAll();
+
+    $ownerquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
+    $ownerstmt = $db->prepare($ownerquery);
+    $ownerstmt->execute();
+    $ownerresult = $ownerstmt->fetchAll();
     /*
       Loop checks query results to determine if user in the Employee table, if
-      not checks results of Manager table, redirecting to appropriate homepage.
-      If in neither table, user is redirected to login screen.
+      not checks results of Manager table, if not in either it checks the Owner table, redirecting to appropriate homepage.
+      If in none of the tables, user is redirected to login screen.
     */
-    foreach ($result as $row){
-      if($row['COUNT(*)'] > 0){
-        $_SESSION['cur_user'] = $username;
-        $_SESSION['fname'] = $row['fname'];
-        $_SESSION['lname'] = $row['lname'];
-        $_SESSION['company_id'] = $row['company_pin'];
+    foreach ($empresult as $emprow){
+      if($emprow['COUNT(*)'] > 0){
+        $_SESSION['cur_user'] = $emprow['username'];
+        $_SESSION['fname'] = $emprow['fname'];
+        $_SESSION['lname'] = $emprow['lname'];
+        $_SESSION['company_id'] = $emprow['company_pin'];
+        $_SESSION['role'] = "Employee";
         header('Location:employee_homepage.html.php');
       }else{
         foreach($manresult as $manrow){
           if($manrow['COUNT(*)'] > 0){
-            $_SESSION['cur_user'] = $username;
+            $_SESSION['cur_user'] = $manrow['username'];
             $_SESSION['fname'] = $manrow['fname'];
             $_SESSION['lname'] = $manrow['lname'];
-            $_SESSION['lname'] = $row['lname'];
-            $_SESSION['company_id'] = $row['company_id'];
+            $_SESSION['company_id'] = $manrow['company_id'];
+            $_SESSION['role'] = "Manager";
             header('Location:manager_homepage.html.php');
           }else{
-            header('Location:index.html.php');
+            foreach($ownerresult as $ownerrow){
+              if($ownerrow['COUNT(*)'] > 0){
+                $_SESSION['cur_user'] = $ownerrow['username'];
+                $_SESSION['fname'] = $ownerrow['fname'];
+                $_SESSION['lname'] = $ownerrow['lname'];
+                $_SESSION['company_id'] = $ownerrow['company_id'];
+                $_SESSION['role'] = "Owner";
+                header('Location:manager_homepage.html.php');
+              }else{
+                header('Location:index.html.login.php');
+              }
+            }
           }
         }
       }
