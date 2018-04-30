@@ -190,7 +190,7 @@
     table.
   */
   if(isset($_POST['shift_enroll_confirmation'])){
-    $query = "INSERT INTO queued_shifts VALUES ('".$_SESSION['shift_enroll_id']."', '".$_SESSION['company_id']."', '".$_SESSION['cur_user']."')";
+    $query = "INSERT INTO queued_shifts VALUES ('".$_SESSION['shift_enroll_id']."', '".$_SESSION['company_id']."', '".$_SESSION['cur_user']."', '".$_SESSION['fname']."', '".$_SESSION['lname']."')";
     $stmt = $db->prepare($query);
     $stmt->execute();
     $_SESSION['shift_enroll_id'] = null;
@@ -226,6 +226,6 @@
     $stmt = $db->prepare($query);
     $stmt->execute();
     //redirectig to the display page. In our case
-    header("Location: create_shifts.html.php");    
+    header("Location: create_shifts.html.php");
   }
 ?>
