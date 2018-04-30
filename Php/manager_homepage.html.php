@@ -70,7 +70,6 @@
 					</li>
           <li>
 						<a href="manager_day_off.html.php" >Approve Day Off</a>
-            <?php echo $_SESSION['role']; ?>
 					</li>
           <?php if($_SESSION['role'] == "Owner"){?>
           <li>

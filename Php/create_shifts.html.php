@@ -36,7 +36,7 @@ $result = $stmt->fetchAll();
         echo "<td>".$row['time_start']."</td>";
         echo "<td>".$row['time_end']."</td>";
         echo "<td>".$row['workers_needed']."</td>";
-        echo "<td><a href=\"edit_shift.html.php?shiftid=$res[idshift]\">Edit</a> | <a href=\"delete_shifts.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+        echo "<td><a href=\"edit_shifts.html.php?shiftid=$res[idshift]\">Edit</a> | <a href=\"delete_shifts.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 	    echo "</tr>";
 	}
 ?>

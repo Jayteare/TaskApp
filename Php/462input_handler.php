@@ -208,7 +208,7 @@
   	$endtime=$_POST['endtime'];
   	$numreq=$_POST['numreq'];
 
-    $query = "INSERT INTO created_shifts VALUES(default, '".$_SESSION['company_id']."''".$day."','".$starttime."','".$endtime."','".$numreq."')";
+    $query = "INSERT INTO created_shifts VALUES(default, '".$_SESSION['company_id']."', '".$day."', '".$starttime."', '".$endtime."', '".$numreq."')";
     $stmt = $db->prepare($query);
     $stmt->execute();
 
