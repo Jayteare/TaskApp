@@ -194,12 +194,12 @@
     $stmt = $db->prepare($query);
     $stmt->execute();
     $_SESSION['shift_enroll_id'] = null;
-    header('Location:http: employee_newshift.html.php');
+    header('Location:employee_newshift.html.php');
   }
   //Stores a selected datein $_SESSION for use in shiftlokup.php after employee_newshift.html.php is reached
   if(isset($_POST['shift_date_submit'])){
     $_SESSION['shift_date_display'] = $_POST['shift_date_range'];
-    header('Location: employee_newshift.html.php');
+    header('Location:employee_newshift.html.php');
   }
 
   if(isset($_POST['add_shift_submit'])){
