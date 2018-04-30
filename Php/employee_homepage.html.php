@@ -151,7 +151,7 @@
                       </tr>
                       <tr>
                         <td><label for="Reason"><b>Reason  </b></label></td>
-                        <td><input type="text" placeholder="Enter a reason to be off" name="reason" required></td>
+                        <td><input type="text" placeholder="Enter reason..." name="reason" required></td>
                       </tr>
                     </table>
                     <button type="submit" name ="request_submit">Submit</button>
