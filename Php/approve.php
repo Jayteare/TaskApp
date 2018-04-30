@@ -10,8 +10,8 @@
     $sql = "UPDATE prerequest SET prerequest.Status = 'Approve' where prerequest.ID=$id";
 
     if (mysqli_query($conn, $sql)) {
-      $sql = "DELETE FROM final_shift USING final_shift, prerequest
-      WHERE final_shift.Shift_ID = prerequest.Shift_ID AND final_shift.userName = prerequest.userName";
+      $sql = "DELETE FROM final_shifts USING final_shifts, prerequest
+      WHERE final_shifts.idshift = prerequest.Shift_ID AND final_shift.username = prerequest.userName";
       if (mysqli_query($conn, $sql)) {
 
         mysqli_close($conn);
