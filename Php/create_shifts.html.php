@@ -2,19 +2,19 @@
 <?php
 //including the database connection file
 include_once("initiate_db.php");
- 
 
-$result = mysqli_query($conn, "SELECT * FROM shifts"); 
+
+$result = mysqli_query($conn, "SELECT * FROM shifts");
 
 
 ?>
- 
+
 <html>
-<head>    
+<head>
     <title>Create New Shift</title>
 	<link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
- 
+
 <body>
   <h1>Shift Management</h1>
     <table align="center">
@@ -24,21 +24,21 @@ $result = mysqli_query($conn, "SELECT * FROM shifts");
             <th>Starting Time</th>
             <th>End Time</th>
 	    <th># Shifts </th>
-	    <td><a href="add_shift.html">Add New Shift</a></td>
+	    <td><a href="add_shift.html.php">Add New Shift</a></td>
 	    <td><a href="manager_homepage.html.php">Home</a></td>
 
         </tr>
-		
-        <?php 
-         
-        while($res = mysqli_fetch_array($result)) {         
+
+        <?php
+
+        while($res = mysqli_fetch_array($result)) {
             echo "<tr>";
             echo "<td>".$res['shiftid']."</td>";
             echo "<td>".$res['day']."</td>";
-            echo "<td>".$res['starttime']."</td>";    
-            echo "<td>".$res['endtime']."</td>";  
-            echo "<td>".$res['numreq']."</td>";			
-            echo "<td><a href=\"edit_shift.html.php?shiftid=$res[shiftid]\">Edit</a> | <a href=\"delete_shift.html.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
+            echo "<td>".$res['starttime']."</td>";
+            echo "<td>".$res['endtime']."</td>";
+            echo "<td>".$res['numreq']."</td>";
+            echo "<td><a href=\"edit_shift.html.php?shiftid=$res[shiftid]\">Edit</a> | <a href=\"delete_shifts.php?shiftid=$res[shiftid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 			echo "</tr>";
 		}
         ?>

@@ -14,15 +14,16 @@
 
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<!-- Style -->
 	</head>
-	
+
 <header role="banner" id="fh5co-header">
 	<div class="fluid-container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="" href="#">TaskerApp</a> 
+				<a class="" href="#">TaskerApp</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -45,27 +46,27 @@
 					<p>Please fill in this form to create an account.</p>
 				</div>
 				<div class="column">
-				
+
 					<label for="company-title"><b>Company Title</b></label>
-					<input type="text" placeholder="Enter Company Title" name="new_company_title" required>
-					
+					<input type="text" placeholder="Enter Desired Company Title" name="new_company_title" required>
+
 					<label for="company-pin"><b>Company PIN</b></label>
-					<input type="text" placeholder="Enter Company PIN" name="new_company_pin" required>
-					
-					<label for="company-manager"><b>Company Account Manager Username</b></label>
-					<input type="text" placeholder="Enter Manager Username" name="new_owner_username" required>
-					
-					<label for="company-manager-fname"><b>Company Account Manager First Name</b></label>
-					<input type="text" placeholder="Enter Company Manager First Name" name="new_owner_fname" required>
-					
-					<label for="company-manager-lname"><b>Company Account Manager Last Name</b></label>
-					<input type="text" placeholder="Enter Company Manager Last Name" name="new_owner_lname" required>
-					
-					<label for="company-manager-email"><b>Company Account Manager Email</b></label>
-					<input type="text" placeholder="Enter Email" name="new_owner_email" required>
-					
-					<label for="company-manager-phone"><b>Company Account Manager Phonenumber</b></label>
-					<input type="text" placeholder="Enter Company Manager Last Name" name="new_owner_phone" required>
+					<input type="text" placeholder="Enter Desired Company PIN" name="new_company_pin" required>
+
+					<label for="company-manager"><b>Account Manager Username</b></label>
+					<input type="text" placeholder="Enter Username for Manager" name="new_owner_username" required>
+
+					<label for="company-manager-fname"><b>Account Manager First Name</b></label>
+					<input type="text" placeholder="Enter Account Manager's First Name" name="new_owner_fname" required>
+
+					<label for="company-manager-lname"><b>Account Manager Last Name</b></label>
+					<input type="text" placeholder="Enter Account Manager's Last Name" name="new_owner_lname" required>
+
+					<label for="company-manager-email"><b>Account Manager Email</b></label>
+					<input type="text" placeholder="Enter Account Manager's Email" name="new_owner_email" required>
+
+					<label for="company-manager-phone"><b>Company Account Manager Phone Number</b></label>
+					<input type="text" placeholder="Enter Account Manager's Phone Number" name="new_owner_phone" required>
 
 					<label for="psw"><b>Enter Password</b></label>
 					<input type="password" placeholder="Enter Password" name="new_owner_password" required>
@@ -79,7 +80,7 @@
 					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
 					<div class="clearfix">
-						<button type="button" class="cancelbtn">Cancel</button>
+						<button type="button" onclick="location.href = 'index.html.login.php';" class="cancelbtn">Cancel</button>
 						<button type="submit" name="create_company_submit" class="signupbtn">Sign Up</button>
 					</div>
 				</div>

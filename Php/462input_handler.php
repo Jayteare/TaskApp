@@ -183,4 +183,14 @@
     $_SESSION['shift_date_display'] = $_POST['shift_date_range'];
     header('Location:employee_newshift.html.php');
   }
+
+  if(isset($_POST['add_shift_submit'])){
+    $day=$_POST['day'];
+  	$starttime=$_POST['starttime'];
+  	$endtime=$_POST['endtime'];
+  	$numreq=$_POST['numreq'];
+
+    $result = mysqli_query($conn, "INSERT INTO shifts(day,starttime,endtime,numreq) VALUES('$day','$starttime','$endtime','$numreq')");
+    header('Location:create_shifts.html.php');
+  }
 ?>

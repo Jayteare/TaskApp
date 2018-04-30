@@ -1,50 +1,39 @@
+<!doctype html>
 <html>
 <head>
-    <title>Add Data</title>
+    <title>Add Shift</title>
 </head>
- 
+
 <body>
-<?php
-//including the database connection file
-include_once("initiate_db.php");
- 
-if(isset($_POST['Submit'])) {    
-	$day=$_POST['day'];
-	$starttime=$_POST['starttime'];
-	$endtime=$_POST['endtime'];
-	$numreq=$_POST['numreq'];
-        
-    // checking empty fields
-    if(empty($day) || empty($starttime) || empty($endtime) || empty($numreq)) {                
-                
-        if(empty($day)) {
-            echo "<font color='red'>Day field is empty.</font><br/>";
-        }
-        
-        if(empty($starttime)) {
-            echo "<font color='red'>Start time field is empty.</font><br/>";
-        }
-		
-		if(empty($endtime)) {
-            echo "<font color='red'>End time field is empty.</font><br/>";
-        }
-		
-		if(empty($numreq)) {
-            echo "<font color='red'>Number of available Shits field is empty.</font><br/>";
-        }
-        
-        //link to the previous page
-        echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
-    } else { 
-        // if all the fields are filled (not empty)             
-        //insert data to database
-        $result = mysqli_query($conn, "INSERT INTO shifts(day,starttime,endtime,numreq) VALUES('$day','$starttime','$endtime','$numreq')");
-        
-        //display success message
-        echo "<font color='green'>Data Added Successfully.";
-        echo "<br/><a href='create_shifts.php'>View Result</a>";
-    }
-}
-?>
+    <a href="create_shifts.html.php">Home</a>
+    <br/><br/>
+
+    <form action="462input_handler.php" method="post">
+        <table width="25%" border="0">
+
+            <tr>
+                <td>Date:</td>
+                <td><input type="date" name="day" required></td>
+            </tr>
+            <tr>
+                <td>Start Time:</td>
+                <td><input type="time" name="starttime" required></td>
+            </tr>
+
+			<tr>
+                <td>End Time:</td>
+                <td><input type="time" name="endtime" required></td>
+            </tr>
+
+	     <tr>
+                <td>Number Required</td>
+                <td><input type="number" name="numreq" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="add_shift_submit" value="Add"></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>

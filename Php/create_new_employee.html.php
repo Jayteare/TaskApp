@@ -16,14 +16,14 @@
 	<link rel="stylesheet" href="css/css/bootstrap.css">
 	<!-- Style -->
 	</head>
-	
+
 	<header role="banner" id="fh5co-header">
 	<div class="fluid-container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="" href="#">TaskerApp</a> 
+				<a class="" href="#">TaskerApp</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -39,7 +39,7 @@
 	</div>
 </header>
 
-	
+
 	<body>
 		<form action="462input_handler.php" method="post" style="border:1px solid #ccc">
 			<div class="row">
@@ -48,19 +48,19 @@
 					<p>Please fill in this form to create an account.</p>
 				</div>
 				<div class="column">
-				
+
 					<label for="employee-username"><b>Employee Username</b></label>
 					<input type="text" placeholder="Enter Username" name="new_employee_username" required>
-					
+
 					<label for="company-pin"><b>Employee Company PIN</b></label>
 					<input type="text" placeholder="Enter Company PIN" name="new_employee_pin" required>
-					
+
 					<label for="employee-firstname"><b>Employee Firstname</b></label>
 					<input type="text" placeholder="Enter First Name" name="new_employee_fname" required>
 
 					<label for="employee-lastname"><b>Employee Lastname</b></label>
 					<input type="text" placeholder="Enter Last Name" name="new_employee_lname" required>
-										
+
 					<label for="employee-email"><b>Employee Email</b></label>
 					<input type="text" placeholder="Enter Email" name="new_employee_email" required>
 
@@ -69,8 +69,8 @@
 
 					<label for="psw-repeat"><b>Repeat Password</b></label>
 					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-					
-				
+
+
 					<label>
 						<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
 					</label>
