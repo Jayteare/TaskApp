@@ -14,7 +14,7 @@
       taking priority over the default current date in shiftlookup.php, the page will be loaded with the selected
       week's shifts rather than the current week's.
     -->
-    <form action="/462Project/462input_handler.php" method="post">
+    <form action="462input_handler.php" method="post">
       <div>
         <label for="party">Choose your desired date to view:</label>
         <input type="date" id="shift_date_range" name="shift_date_range" required>
@@ -36,7 +36,7 @@
         foreach($day1result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
@@ -61,7 +61,7 @@
         foreach($day2result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
@@ -86,7 +86,7 @@
         foreach($day3result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
@@ -111,7 +111,7 @@
         foreach($day4result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
@@ -136,7 +136,7 @@
         foreach($day5result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
@@ -161,7 +161,7 @@
         foreach($day6result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
@@ -186,7 +186,7 @@
         foreach($day7result as $row){
       ?>
         <div class="shift-body">
-          <form action="/462Project/employee_newshift.html.php" method="post">
+          <form action="employee_newshift.html.php" method="post">
             Shift Day: <?php echo $row['date'] ?> <br>
             Shift Time: <?php echo $row['time_start'] ?> to <?php echo $row['time_end'] ?> <br>
             Workers Needed: <?php echo $row['workers_needed'] ?> <br>
