@@ -47,7 +47,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
@@ -72,7 +72,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
@@ -97,7 +97,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
@@ -122,7 +122,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
@@ -147,7 +147,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
@@ -172,7 +172,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
@@ -197,7 +197,7 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:http://localhost/462Project/enroll_confirm.html.php');
+  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
   			  }
   		  }
   		?>
