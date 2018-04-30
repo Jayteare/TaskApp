@@ -214,4 +214,18 @@
 
     header('Location:create_shifts.html.php');
   }
+
+  if(isset($_POST['edit_shift_submit'])){
+    $idshift = $_POST['idshift'];
+    $day=$_POST['day'];
+    $starttime=$_POST['starttime'];
+	  $endtime=$_POST['endtime'];
+    $numreq=$_POST['numreq'];
+
+    $query = "UPDATE created_shifts SET date = '".$day."', time_start = '".$starttime."', time_end = '".$endtime."', workers_needed = '".$numreq."'  WHERE idshift= '".$shiftid."'";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    //redirectig to the display page. In our case
+    header("Location: create_shifts.html.php");    
+  }
 ?>
