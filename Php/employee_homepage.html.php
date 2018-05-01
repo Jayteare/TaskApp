@@ -31,7 +31,7 @@
   }
 ?>
 <html>
-  <title>W3.CSS Template</title>
+  <title>Employee Homepage</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/css/request.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,7 +92,7 @@
           <!-- Accordion -->
           <div class="w3-card w3-round">
             <div class="w3-white">
-              <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/employee_newshift.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Enroll in Shifts</button>
               <div id="Demo1" class="w3-hide w3-container">
                 <p>Some text..</p>
               </div>
@@ -161,7 +161,7 @@
                   </div>
                 </form>
               </div>
-        </div>      
+        </div>
       </div>
       <br>
             <!-- Interests -->
