@@ -54,7 +54,7 @@
 	<?php
 	$mainarray = ""; //Main array used to hold the key information from query
 	$shiftidarray = "";
-	$empidarray = "";
+	$empidarray = "";	
 	$empfnamearray = "";
 	$emplnamearray = "";
 
@@ -64,8 +64,7 @@
 	if ($result->num_rows > 0) {
 		while ($row = $result->fetch_assoc()) {
 			//Stores all data from shifts table into an array ($shiftnamearray)
-			$shiftname = "Shift ID: " . $row["idshift"] . " Day: " . $row["date"] . " Start Time: " . $row["time_start"] . " End Time: " . $row["time_end"] . " Number of Employees: " . $row["workers_needed"] . "<br>";
-			$shiftnamearray[$shiftcount] = "<strong>" . $shiftname . "</strong>";
+			$shiftname = "Shift ID: " . $row["idshift"] . " Day: " . $row["date"] . " Start Time: " . $row["time_start"] . " End Time: " . $row["time_end"] . " Number of Employees: " . $row["workers_needed"] . "<br>"; 			$shiftnamearray[$shiftcount] = "<strong>" . $shiftname . "</strong>";
 			echo $shiftnamearray[$shiftcount];
 			//Stores the shift id into the main array && stores number of employees per shift into $numEmp
 			$mainarray[$shiftcount][$availcount] = $row["idshift"];
@@ -79,7 +78,7 @@
 
 			//Display available employee for shifts - contains *a 2x2 array ($mainarray) which inclues   all the people who are available for the Shift
 			//												   *a shift counter ($availcount) that indicates the number of people who are availible for the shift and used to access the people from the array
-			$ashiftsql = "SELECT * FROM queued_shifts WHERE idshift = \"" . $row["idshift"] . "\" AND company_id = \"" . $_SESSION['company_id'] . "\" ";
+			$ashiftsql = "SELECT * FROM queued_shifts WHERE idshift = \"" . $row["idshift"] . "\" AND company_id = \"" . $_SESSION["company_id"] . "\"";
 			$result2 = $conn->query($ashiftsql);
 			if ($result2->num_rows > 0) {
 				while ($row2 = $result2->fetch_assoc()) {
