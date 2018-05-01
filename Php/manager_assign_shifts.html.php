@@ -121,11 +121,11 @@
 	?>
 	<br>
 	
-	<form action = "assign_remove.html" onsubmit="return removeData('<?php echo $size ?>')">
+	<form action = "assign_remove.html.php" onsubmit="return removeData('<?php echo $size ?>')">
 		<input type="submit" value="Confirm">
 	</form>
 
-	<form action = "manager_homepage.php" >
+	<form action = "manager_homepage.html.php" >
 		<input type="submit" value="Main Menu">
 	</form>
 
