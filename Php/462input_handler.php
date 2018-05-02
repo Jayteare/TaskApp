@@ -203,10 +203,10 @@
   }
 
   if(isset($_POST['add_shift_submit'])){
-    $day=$_POST['day'];
-  	$starttime=$_POST['starttime'];
-  	$endtime=$_POST['endtime'];
-  	$numreq=$_POST['numreq'];
+    $day=$_POST['date'];
+  	$starttime=$_POST['time_start'];
+  	$endtime=$_POST['time_end'];
+  	$numreq=$_POST['workers_needed'];
 
     $query = "INSERT INTO created_shifts VALUES(default, '".$_SESSION['company_id']."', '".$day."', '".$starttime."', '".$endtime."', '".$numreq."')";
     $stmt = $db->prepare($query);
