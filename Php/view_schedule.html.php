@@ -11,7 +11,7 @@
 	
 
 	// Attempt select query execution
-	$sql = "SELECT idshift,fname,lname FROM final_shifts";
+	$sql = "SELECT * FROM final_shifts";
 	if($result = $conn->query($sql)){
 		if($result->num_rows > 0){
 			
@@ -25,20 +25,18 @@
 	    // echo "<th>Company</th>";		
             echo "</tr>";
 			while($row = $result->fetch_array()){
-				$idshift=$row['idshift'];
-				$empfname=$row['fname'];
-				$emplname=$row['lname'];
-				//$sql2 = "SELECT fname,lname FROM employees WHERE username='$empid'";
-				//$result2 = $conn->query($sql2);
-				//$empcolumns = $result2->fetch_array();
-				//$shiftid = $row['idshift'];
-				$sql3 = "SELECT date,time_start, time_end FROM created_shifts WHERE idshift='$idshift'";
+				$empid=$row['username'];
+				$sql2 = "SELECT fname,lname FROM employees WHERE username='$empid'";
+				$result2 = $conn->query($sql2);
+				$empcolumns = $result2->fetch_array();
+				$shiftid = $row['idshift'];
+				$sql3 = "SELECT date,time_start, time_end FROM created_shifts WHERE idshift='$shiftid'";
 				$result3 = $conn->query($sql3);
 				$shiftcolumns = $result3->fetch_array();
 				
-		echo "<tr>";
-                echo "<td>". $empfname."</td>";
-                echo "<td>". $emplname."</td>";
+				echo "<tr>";
+                echo "<td>". $empcolumns['fname']."</td>";
+                echo "<td>". $empcolumns['lname']."</td>";
                 echo "<td>" . $shiftcolumns['day'] . "</td>";
                 echo "<td>" . $shiftcolumns['time-start'] . "</td>";
 		echo "<td>" . $shiftcolumns['time-end'] . "</td>";
