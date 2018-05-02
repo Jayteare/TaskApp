@@ -26,7 +26,7 @@
       <table border="0">
         <tr>
           <td>Day</td>
-          <td><input type="Date" name="day" value="<?php echo $day?>"></td>
+          <td><input type="Date" name="date" value="<?php echo $day?>"></td>
         </tr>
         <tr>
           <td>Start Time</td>
