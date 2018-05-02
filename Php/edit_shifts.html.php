@@ -4,12 +4,12 @@
   //getting id from url
   $idshift = $_GET['idshift'];
   //selecting data associated with this particular id
-  $query = "SELECT idshift,date,time_start,time_end,workers_needed FROM created_shifts WHERE idshift=$idshift";
+  $query = "SELECT * FROM created_shifts WHERE idshift=$idshift";
   $stmt = $db->prepare($query);
   $stmt->execute();
   $result = $stmt->fetchAll();
   foreach($result as $row){
-    $day = $row['date'];
+    $day = $row['date'];	  
     $starttime = $row['time_start'];
     $endtime = $row['time_end'];
     $numreq=$row['workers_needed'];
@@ -32,7 +32,7 @@
           <td>Start Time</td>
           <td><input type="Time" name="time_start" value="<?php echo $starttime?>"></td>
         </tr>
-			  <tr>
+	<tr>
           <td>End Time</td>
           <td><input type="Time" name="time_end" value="<?php echo $endtime?>"></td>
         </tr>
