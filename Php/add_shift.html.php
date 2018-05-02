@@ -12,19 +12,19 @@
       <table width="25%" border="0">
         <tr>
           <td>Date:</td>
-          <td><input type="date" name="day" required></td>
+          <td><input type="date" name="date" required></td>
         </tr>
         <tr>
           <td>Start Time:</td>
-          <td><input type="time" name="starttime" required></td>
+          <td><input type="time" name="time_start" required></td>
         </tr>
   		  <tr>
           <td>End Time:</td>
-          <td><input type="time" name="endtime" required></td>
+          <td><input type="time" name="time_end" required></td>
         </tr>
 	      <tr>
           <td>Number Required</td>
-          <td><input type="number" name="numreq" required></td>
+          <td><input type="number" name="workers_needed" required></td>
         </tr>
         <tr>
           <td></td>
