@@ -11,7 +11,7 @@
 	
 
 	// Attempt select query execution
-	$sql = "SELECT * FROM assignshifts";
+	$sql = "SELECT * FROM final_shifts";
 	if($result = $conn->query($sql)){
 		if($result->num_rows > 0){
 			
@@ -21,15 +21,16 @@
             echo "<th>Last Name</th>";
             echo "<th>Day</th>";
             echo "<th>Start Time</th>";
-			echo "<th>End Time</th>";
+	    echo "<th>End Time</th>";
+	    // echo "<th>Company</th>";		
             echo "</tr>";
 			while($row = $result->fetch_array()){
-				$empid=$row['employeeid'];
+				$empid=$row['username'];
 				$sql2 = "SELECT fname,lname FROM employees WHERE username='$empid'";
 				$result2 = $conn->query($sql2);
 				$empcolumns = $result2->fetch_array();
-				$shiftid = $row['shiftid'];
-				$sql3 = "SELECT date,time-start, time-end FROM shifts WHERE shiftid='$shiftid'";
+				$shiftid = $row['idshift'];
+				$sql3 = "SELECT date,time-start, time-end FROM created_shifts WHERE idshift='$shiftid'";
 				$result3 = $conn->query($sql3);
 				$shiftcolumns = $result3->fetch_array();
 				
