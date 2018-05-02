@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-	include_once("connect-db.php");
+	include("initiate_db.php");
 	
 	echo "<h1>Employee Schedule</h1>";
 	
@@ -29,7 +29,7 @@
 				$result2 = $conn->query($sql2);
 				$empcolumns = $result2->fetch_array();
 				$shiftid = $row['shiftid'];
-				$sql3 = "SELECT day,starttime, endtime FROM shifts WHERE shiftid='$shiftid'";
+				$sql3 = "SELECT date,time-start, time-end FROM shifts WHERE shiftid='$shiftid'";
 				$result3 = $conn->query($sql3);
 				$shiftcolumns = $result3->fetch_array();
 				
@@ -37,13 +37,13 @@
                 echo "<td>". $empcolumns['fname']."</td>";
                 echo "<td>". $empcolumns['lname']."</td>";
                 echo "<td>" . $shiftcolumns['day'] . "</td>";
-                echo "<td>" . $shiftcolumns['starttime'] . "</td>";
-				echo "<td>" . $shiftcolumns['endtime'] . "</td>";
-				echo "</tr>";
+                echo "<td>" . $shiftcolumns['time-start'] . "</td>";
+		echo "<td>" . $shiftcolumns['time-end'] . "</td>";
+		echo "</tr>";
 				//$result2->free();
 				//$result3->free();
-			}
-			echo "</table>";
+		}
+		echo "</table>";
 			// Free result set
 			$result->free();
     } 	else{
