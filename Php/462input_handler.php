@@ -218,7 +218,7 @@
   if(isset($_POST['edit_shift_submit'])){
     $idshift = $_POST['idshift'];
     $day=$_POST['date'];
-    $starttime=$_POST['time-start'];
+    $starttime=$_POST['time_start'];
 	  $endtime=$_POST['time_end'];
     $numreq=$_POST['workers_needed'];
 
