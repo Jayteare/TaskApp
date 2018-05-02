@@ -27,16 +27,16 @@
 			while($row = $result->fetch_array()){
 				$idshift=$row['idshift'];
 				$empfname=$row['fname'];
-				$emplname=$row['lname']
+				$emplname=$row['lname'];
 				//$sql2 = "SELECT fname,lname FROM employees WHERE username='$empid'";
 				//$result2 = $conn->query($sql2);
 				//$empcolumns = $result2->fetch_array();
 				//$shiftid = $row['idshift'];
-				$sql3 = "SELECT date,time-start, time-end FROM created_shifts WHERE idshift='$idshift'";
+				$sql3 = "SELECT date,time_start, time_end FROM created_shifts WHERE idshift='$idshift'";
 				$result3 = $conn->query($sql3);
 				$shiftcolumns = $result3->fetch_array();
 				
-				echo "<tr>";
+		echo "<tr>";
                 echo "<td>". $empfname."</td>";
                 echo "<td>". $emplname."</td>";
                 echo "<td>" . $shiftcolumns['day'] . "</td>";
