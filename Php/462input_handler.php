@@ -222,7 +222,7 @@
 	  $endtime=$_POST['time_end'];
     $numreq=$_POST['workers_needed'];
 
-    $query = "UPDATE created_shifts SET date = '".$day."', time_start = '".$starttime."', time_end = '".$endtime."', workers_needed = '".$numreq."'  WHERE idshift= '".$shiftid."'";
+    $query = "UPDATE created_shifts SET date = '".$day."', time_start = '".$starttime."', time_end = '".$endtime."', workers_needed = '".$numreq."'  WHERE idshift= '".$idshift."'";
     $stmt = $db->prepare($query);
     $stmt->execute();
     //redirectig to the display page. In our case
