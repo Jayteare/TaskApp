@@ -30,15 +30,15 @@
         </tr>
         <tr>
           <td>Start Time</td>
-          <td><input type="Time" name="starttime" value="<?php echo $starttime?>"></td>
+          <td><input type="Time" name="time_start" value="<?php echo $starttime?>"></td>
         </tr>
 			  <tr>
           <td>End Time</td>
-          <td><input type="Time" name="endtime" value="<?php echo $endtime?>"></td>
+          <td><input type="Time" name="time_end" value="<?php echo $endtime?>"></td>
         </tr>
         <tr>
           <td>Number of Shifts Required </td>
-          <td><input type="number" name="numreq" value="<?php echo $numreq?>"></td>
+          <td><input type="number" name="workers_needed" value="<?php echo $numreq?>"></td>
         </tr>
         <tr>
           <td><input type="hidden" name="idshift" value=<?php echo $_GET['idshift'];?>></td>
