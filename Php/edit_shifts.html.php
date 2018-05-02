@@ -4,7 +4,7 @@
   //getting id from url
   $idshift = $_GET['idshift'];
   //selecting data associated with this particular id
-  $query = "SELECT * FROM created_shifts WHERE idshift=$idshift";
+  $query = "SELECT date,time_start,time_end,workers_needed FROM created_shifts WHERE idshift=$idshift";
   $stmt = $db->prepare($query);
   $stmt->execute();
   $result = $stmt->fetchAll();
