@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php session_start();
-include 'initiate_db.php';
 
 $fname =  $_SESSION['fname'];
 $lname =  $_SESSION['lname'];
@@ -39,7 +38,8 @@ $lname =  $_SESSION['lname'];
         </tr>
       <?php
      
-      
+       $db = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
+        
         $sql = "SELECT Shift_ID, EFName, ELName, StartShift, EndShift, Reason, Status FROM prerequest
       WHERE EFName = ('".$fname."' AND ELName = '".$lname."') AND (Status = 'Approve' OR Status = 'Decline')";
 
