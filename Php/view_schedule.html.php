@@ -30,12 +30,12 @@ session_start();
 <?php	foreach($result as $row){ ?>
 			<tr>
 				<td><?php echo $row['COUNT(*)']?></td>
-				<td><?php echo $row['final_shifts.idshift']?></td>
-				<td><?php echo $row['final_shifts.fname']?></td>
-				<td><?php echo $row['final_shifts.lname']?></td>
-				<td><?php echo $row['created_shifts.date']?></td>
-				<td><?php echo $row['created_shifts.time_start']?></td>
-				<td><?php echo $row['created_shifts.time_end']?></td>
+				<td><?php echo $row['idshift']?></td>
+				<td><?php echo $row['fname']?></td>
+				<td><?php echo $row['lname']?></td>
+				<td><?php echo $row['date']?></td>
+				<td><?php echo $row['time_start']?></td>
+				<td><?php echo $row['time_end']?></td>
 			</tr>
 <?php } ?>
 			</table>
