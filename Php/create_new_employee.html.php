@@ -77,7 +77,7 @@
 					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
 					<div class="clearfix">
-						<button type="button" onclick="location.href = 'index.html.login.php';" class="cancelbtn">Cancel</button>
+						<button type="button" onclick="location.href = registration.html.php';" class="cancelbtn">Cancel</button>
 						<button type="submit" name="create_employee_submit" class="signupbtn">Sign Up</button>
 					</div>
 				</div>

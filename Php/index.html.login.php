@@ -11,15 +11,15 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <title>Login</title>
   </head>
-  
-  
+
+
 <header role="banner" id="fh5co-header">
 	<div class="fluid-container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="" href="#">TaskerApp</a> 
+				<a class="" href="#">TaskerApp</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -34,7 +34,7 @@
 		</nav>
 	</div>
 </header>
-  
+
   <body>
     <main class="main-content">
       <div class="content-box">
@@ -46,9 +46,6 @@
           <input type="password" name="password" ><br><br>
           <input type="submit" name="login_submit" value="Submit">
         </form>
-        <br>
-        <button class="link-button" onclick="window.location.href='create_new_employee.html.php'">Enroll New Employee</button>
-        <button class="link-button" onclick="window.location.href='create_new_company.html.php'">Enroll New Company</button>
       </div>
     </main>
   </body>
