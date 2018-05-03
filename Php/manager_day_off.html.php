@@ -41,12 +41,16 @@ $lname =  $_SESSION['lname'];
       if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
       }
-
-      $sql = "SELECT Shift_ID, EFName, ELName, StartShift, EndShift, Reason, Status FROM prerequest
+      
+        $sql = "SELECT Shift_ID, EFName, ELName, StartShift, EndShift, Reason, Status FROM prerequest
       WHERE EFName = ('".$fname."' AND ELName = '".$lname."') AND (Status = 'Approve' OR Status = 'Decline')";
 
       $result = mysqli_query($conn, $sql);
-
+        
+        
+        <?php echo "number of data is" mysqli_num_rows($result) ?>
+        
+        
       if (mysqli_num_rows($result) > 0) {
       // output data of each row
         while($row = mysqli_fetch_assoc($result)) {
