@@ -79,7 +79,9 @@
           <li>
             <a href="create_new_manager.html.php" >Add New Manager</a>
           </li>
-	  
+	  <li>
+	    <a href="http://localhost/462Project/index.html.php">Logout</a>
+	  </li>
 		
 		 
 	      </ul>
