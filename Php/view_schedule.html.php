@@ -11,13 +11,13 @@ session_start();
 	<body>
 		<h1>Schedule</h1>
 		<table>
-			
+
 		</table>
 <?php
 	// Attempt select query execution
-	$query = "SELECT final.idshift, final.fname, final.lname, create.date, create.time_start, create.time_end
-						 FROM final_shifts as final, created_shifts as create
-						 WHERE company_id = '".$_SESSION['company_id']."' and final.idshift = create.idshift ";
+	$query = "SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
+						 FROM final_shifts , created_shifts
+						 WHERE final_shifts.company_id = '".$_SESSION['company_id']."' AND final_shifts.idshift = created_shifts.idshift ";
 	$stmt = $db->prepare($query);
 	$stmt->execute();
 	$result = $stmt->fetchAll();
@@ -33,12 +33,12 @@ session_start();
 			</tr>
 <?php	foreach($result as $row){ ?>
 			<tr>
-				<td><?php echo $row['final.idshift']?></td>
-				<td><?php echo $row['final.fname']?></td>
-				<td><?php echo $row['final.lname']?></td>
-				<td><?php echo $row['create.date']?></td>
-				<td><?php echo $row['create.time_start']?></td>
-				<td><?php echo $row['create.time_end']?></td>
+				<td><?php echo $row['final_shifts.idshift']?></td>
+				<td><?php echo $row['final_shifts.fname']?></td>
+				<td><?php echo $row['final_shifts.lname']?></td>
+				<td><?php echo $row['created_shifts.date']?></td>
+				<td><?php echo $row['created_shifts.time_start']?></td>
+				<td><?php echo $row['created_shifts.time_end']?></td>
 			</tr>
 <?php } ?>
 			</table>
