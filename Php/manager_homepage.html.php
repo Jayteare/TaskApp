@@ -74,13 +74,13 @@
           <li>
 		<a href="manager_day_off.html.php" >Approval Day Off</a>
 	  </li>
+
           <li>
             <a href="create_new_manager.html.php" >Add New Manager</a>
           </li>
 	  
 		
 		 
-          <?php } ?>
 	      </ul>
 	    </div>
     </div>
