@@ -37,39 +37,49 @@ $lname =  $_SESSION['lname'];
           <th>Status</th>
         </tr>
       <?php
-     
-       $db = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
-        
-        $sql = "SELECT Shift_ID, EFName, ELName, StartShift, EndShift, Reason, Status FROM prerequest
-      WHERE (EFName = '".$fname."' AND ELName = '".$lname."') AND (Status = 'Approve' OR Status = 'Decline')";
-
-          $stmt = $conn->prepare($sql);
-      $stmt->execute();
-      $stmt->store_result();
-      $stmt->bind_result($shift_ID, $EFName, $ELName, $StartShift, $EndShift, $Reason, $Status);      
-      if($stmt->num_rows > 0){
-      while($stmt->fetch()){
-          echo "<tr>";
-          echo "<td >".$shift_ID."</td>";
-          echo "<td >".$EFName."</td>";
-          echo "<td >".$ELName."</td>";
-          echo "<td >".$StartShift."</td>";
-          echo "<td >".$EndShift."</td>";
-          echo "<td >".$Reason."</td>";
-          echo "<td >".$Status."</td>";
   
-          echo "</tr>";
+        $conn = new mysqli("localhost", "root", "", "462_schedule_project");
+        if (!$conn) {
+          die("Connection failed: " . mysqli_connect_error());
         }
-      }
-       else {
+    
+        $sql = "SELECT prerequest.ID,
+                       prerequest.Shift_ID,
+                       prerequest.EFName,
+                       prerequest.ELName,
+                       prerequest.StartShift,
+                       prerequest.EndShift,
+                       prerequest.Reason,
+                       prerequest.Status
+    
+        FROM prerequest
+        WHERE (MFName = '$fname' AND MLName = '$lname' )AND (Status = 'Approve' OR Status = 'Deline') ";
+    
+    
+    
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->bind_result($ID, $shift_ID, $EFName, $ELName, $StartShift, $EndShift, $Reason, $Status);
+    
+        if($stmt->num_rows > 0){
+        while($stmt->fetch()){
+            echo "<tr>";
+            echo "<td >".$shift_ID."</td>";
+            echo "<td >".$EFName."</td>";
+            echo "<td >".$ELName."</td>";
+            echo "<td >".$StartShift."</td>";
+            echo "<td >".$EndShift."</td>";
+            echo "<td >".$Reason."</td>";
+            echo "<td >".$Status."</td>";
+    
+            echo "</tr>";
+          }
+        }
+        else{
+          echo "<td colspan = 7><center><h2> There is no request!!!!</h2></center> </td>";
+        }
         ?>
-        <tr>
-          <td colspan="7"><center> <?php echo "There is no request!!!" ?> </center></td>
-        <tr>
-          <?php
-        }
-
-      ?>
     <a href="http://localhost/462Project/index.html.php">Logout</a>
 
   </body>
