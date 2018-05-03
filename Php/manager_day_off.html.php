@@ -23,7 +23,7 @@ $lname =  $_SESSION['lname'];
     Hello <?php echo $_SESSION['fname'] ?> <?php echo $_SESSION['lname']; ?>.  Welcome to the manager homepage.
     <br>
 
-      <a href="http://localhost/462Project/manager_approval.html.php">Approve reuqest day off</a>
+      <a href="https://taskingapplication.herokuapp.com/Php/manager_homepage.html.php">Go back to manager home page</a>
       <br>
 
       <table style = "width:50%" >
