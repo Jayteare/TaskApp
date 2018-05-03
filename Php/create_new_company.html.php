@@ -47,32 +47,32 @@
 				</div>
 				<div class="column">
 
-					<label for="company-title"><b>Company Title</b></label>
+					<label for="new_company_title"><b>Company Title</b></label>
 					<input type="text" placeholder="Enter Desired Company Title" name="new_company_title" required>
 
-					<label for="company-pin"><b>Company PIN</b></label>
+					<label for="new_company_pin"><b>Company PIN</b></label>
 					<input type="text" placeholder="Enter Desired Company PIN" name="new_company_pin" required>
 
-					<label for="company-manager"><b>Account Manager Username</b></label>
+					<label for="new_owner_username"><b>Account Manager Username</b></label>
 					<input type="text" placeholder="Enter Username for Manager" name="new_owner_username" required>
 
-					<label for="company-manager-fname"><b>Account Manager First Name</b></label>
+					<label for="new_owner_fname"><b>Account Manager First Name</b></label>
 					<input type="text" placeholder="Enter Account Manager's First Name" name="new_owner_fname" required>
 
-					<label for="company-manager-lname"><b>Account Manager Last Name</b></label>
+					<label for="new_owner_lname"><b>Account Manager Last Name</b></label>
 					<input type="text" placeholder="Enter Account Manager's Last Name" name="new_owner_lname" required>
 
-					<label for="company-manager-email"><b>Account Manager Email</b></label>
+					<label for="new_owner_email"><b>Account Manager Email</b></label>
 					<input type="text" placeholder="Enter Account Manager's Email" name="new_owner_email" required>
 
-					<label for="company-manager-phone"><b>Company Account Manager Phone Number</b></label>
+					<label for="new_owner_phone"><b>Company Account Manager Phone Number</b></label>
 					<input type="text" placeholder="Enter Account Manager's Phone Number" name="new_owner_phone" required>
 
-					<label for="psw"><b>Enter Password</b></label>
+					<label for="new_owner_password"><b>Enter Password</b></label>
 					<input type="password" placeholder="Enter Password" name="new_owner_password" required>
 
-					<label for="psw-repeat"><b>Repeat Password</b></label>
-					<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+					<label for="psw_repeat_owner"><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Password" name="psw_repeat_owner" required>
 
 					<label>
 						<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -87,5 +87,23 @@
 			</div>
 		</div>
 	</form>
+	<?php
+	if(isset($_SESSION['companyCreateErrorMsg'])){
+      //JavaScript error pop-up is displayed upon detection of invalid submission
+      echo '<script type="text/javascript">
+              alert("'.$_SESSION['companyCreateErrorMsg'].'");
+            </script>';
+      $_SESSION['companyCreateErrorMsg']=null;
+      $_SESSION['new_company_title']=null;
+      $_SESSION['new_company_pin']=null;
+      $_SESSION['new_owner_username']=null;
+      $_SESSION['new_owner_password']=null;
+      $_SESSION['new_owner_fname']=null;
+      $_SESSION['new_owner_lname']=null;
+      $_SESSION['new_owner_pin']=null;
+      $_SESSION['new_owner_email']=null;
+      $_SESSION['new_owner_phone']=null;
+    }
+	?>
 	</body>
 </html>

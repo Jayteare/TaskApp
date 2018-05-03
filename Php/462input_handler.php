@@ -118,6 +118,62 @@
     }
   }
 
+  //Activated when "Submit" button is pressed on create_new_manager.html.php
+  if(isset($_POST['create_manager_submit'])){
+	  $_SESSION['new_manager_username']=$_POST['new_manager_username'];
+	  $_SESSION['new_manager_password']=$_POST['new_manager_password'];
+    $_SESSION['new_manager_fname']=$_POST['new_manager_fname'];
+	  $_SESSION['new_manager_lname']=$_POST['new_manager_lname'];
+    $_SESSION['new_manager_pin']=$_POST['new_manager_pin'];
+	  $_SESSION['new_manager_email']=$_POST['new_manager_email'];
+    $_SESSION['new_manager_phone']=$_POST['new_manager_phone'];
+    /*
+      Query determines if username provided is already in database, if
+      so currently submitted values are stored in $_SESSION to be displayed on
+      create_new_manager.html.php
+    */
+    $checkquery = "SELECT COUNT(*) FROM (SELECT username FROM managers WHERE username = '".$_SESSION['new_manager_username']."' AND company_pin = '".$_SESSION['new_manager_pin']."') AS x";
+    $checkstmt = $db->prepare($checkquery);
+    $checkstmt->execute();
+    $checkresult = $checkstmt->fetchAll();
+
+    foreach ($checkresult as $checkrow) {
+      if($checkrow['COUNT(*)'] < 1){
+        /*
+          Query determines if PIN provided matches an existing manager's personal
+          PIN. If PIN doesn't match, currently submitted values are stored in
+          $_SESSION to be displayed on create_new_manager.html.php
+        */
+        $query = "SELECT COUNT(*) FROM (SELECT idcompany FROM company WHERE idcompany = '".$_SESSION['new_manager_pin']."') AS x";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        foreach($result as $row){
+          if($row['COUNT(*)'] > 0){
+            $query = "INSERT INTO managers VALUES ('".$_SESSION['new_manager_username']."', '".$_SESSION['new_manager_password']."', '".$_SESSION['new_manager_fname']."', '".$_SESSION['new_manager_lname']."', '".$_SESSION['new_manager_pin']."', '".$_SESSION['new_manager_email']."', '".$_SESSION['new_manager_phone']."')";
+    	      $stmt = $db->prepare($query);
+    	      $stmt->execute();
+            $_SESSION['new_manager_username']=null;
+            $_SESSION['new_manager_password']=null;
+            $_SESSION['new_manager_fname']=null;
+            $_SESSION['new_manager_lname']=null;
+            $_SESSION['new_manager_pin']=null;
+            $_SESSION['new_manager_email']=null;
+            $_SESSION['new_manager_phone']=null;
+            $_SESSION['managerCreateErrorMsg']=null;
+    	      header('Location:manager_homepage.html.php');
+          }else{
+            $_SESSION['managerCreateErrorMsg']="Your PIN must be valid!";
+            header('Location:create_new_manager.html.php');
+          }
+        }
+      }else{
+        $_SESSION['managerCreateErrorMsg']="Your Username must be unique!";
+        header('Location:create_new_manager.html.php');
+      }
+    }
+  }
+
   //Activated when "Submit" button is pressed on create_new_company.html.php
   if(isset($_POST['create_company_submit'])){
 	  $_SESSION['new_company_title']=$_POST['new_company_title'];
