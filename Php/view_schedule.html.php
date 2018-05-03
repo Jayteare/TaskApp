@@ -11,11 +11,10 @@ session_start();
 	<body>
 		<h1>Schedule</h1>
 <?php
-echo $_SESSION['company_id'];
 	// Attempt select query execution
 	$query = "SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
-						 FROM final_shifts , created_shifts
-						 WHERE final_shifts.company_id = '".$_SESSION['company_id']."' && final_shifts.idshift = created_shifts.idshift ";
+						 FROM  final_shifts , created_shifts
+						 WHERE final_shifts.idshift = created_shifts.idshift ";
 	$stmt = $db->prepare($query);
 	$stmt->execute();
 	$result = $stmt->fetchAll();
