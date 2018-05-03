@@ -60,17 +60,20 @@
       <div id = "navMenue">
         <ul>
           <li>
-						<a href="create_shifts.html.php">Create Shifts</a>
-					</li>
+		<a href="create_shifts.html.php">Create Shifts</a>
+	  </li>
           <li>
-						<a href="manager_assign_shifts.html.php">Assign Shifts</a>
-					</li>
+		<a href="manager_assign_shifts.html.php">Assign Shifts</a>
+	  </li>
           <li>
-						<a href="view_schedule.html.php">View Weekly Schedule</a>
-					</li>
+		<a href="view_schedule.html.php">View Weekly Schedule</a>
+	  </li>
+	  <li>
+		  <a href="manager_approval.html.php">List of request day off </a>
+	  </li>
           <li>
-						<a href="manager_day_off.html.php" >Approve Day Off</a>
-					</li>
+		<a href="manager_day_off.html.php" >Approval Day Off</a>
+	  </li>
           <?php if($_SESSION['role'] == "Owner"){?>
           <li>
             <a href="create_new_manager.html.php" >Add New Manager</a>
