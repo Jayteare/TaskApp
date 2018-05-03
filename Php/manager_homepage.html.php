@@ -78,9 +78,7 @@
           <li>
             <a href="create_new_manager.html.php" >Add New Manager</a>
           </li>
-	  <li>
-            <a href="https://taskingapplication.herokuapp.com/Php/index.html.php" >Logout</a>
-          </li>
+	  
 		
 		 
           <?php } ?>
