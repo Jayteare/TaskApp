@@ -69,8 +69,8 @@
         echo "<td >".$EndShift."</td>";
         echo "<td >".$Reason."</td>";
         echo "<td >".$Status."</td>";
-        echo "<td><a href='Approve.php?id=".$ID."'>$buttonName1</a></td>";
-        echo "<td><a href='Decline.php?id=".$ID."'>$buttonName2</a></td>";
+        echo "<td><a href='approve.php?id=".$ID."'>$buttonName1</a></td>";
+        echo "<td><a href='decline.php?id=".$ID."'>$buttonName2</a></td>";
 
         echo "</tr>";
       }
