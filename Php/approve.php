@@ -7,7 +7,7 @@
     die ("Connection failed:  " .mysqli_connect_error());
   }
 
-    $sql = "UPDATE prerequest SET prerequest.Status = 'Approve' where prerequest.ID=$id";
+    $sql = "UPDATE prerequest SET prerequest.Status = 'Approved' where prerequest.ID=$id";
 
     if (mysqli_query($conn, $sql)) {
       $sql = "DELETE FROM final_shifts USING final_shifts, prerequest
