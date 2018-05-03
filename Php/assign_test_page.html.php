@@ -15,15 +15,18 @@ $shiftstmt = $db->prepare($shiftquery);
 $shiftstmt->execute();
 $shiftresult = $shiftstmt->fetchAll();
 foreach($shiftresult as $shiftrow){
-$shiftname = "Shift ID: " . $shiftrow["idshift"] . " Day: " . $shiftrow["date"] . " Start Time: " . $shiftrow["time_start"] . " End Time: " . $shiftrow["time_end"] . " Number of Employees: " . $shiftrow["workers_needed"] . "<br>";
+$shiftname = "Shift ID: " . $shiftrow["idshift"] . " Day: " . $shiftrow["date"] . " Start Time: " . $shiftrow["time_start"] . " End Time: " . $shiftrow["time_end"] . " Number of Employees: " . $shiftrow["workers_needed"];
 echo $shiftname;
+echo "<br>";
   $personquery = "SELECT * FROM queued_shifts WHERE idshift = '".$shiftrow['idshift']."' AND company_id = '".$_SESSION['company_id']."' ";
   $personstmt = $db->prepare($personquery);
   $personstmt->execute();
   $personresult = $personstmt->fetchAll();
   foreach($personresult as $personrow){
     echo $personrow['username'];
+    echo "<br>";
   }
+  echo "<br><br><br>";
 ?>
 
 <?php } ?>
