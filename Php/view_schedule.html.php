@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include("initiate_db.php");
+include 'initiate_db.php';
 session_start();
 ?>
 <html lang="en" dir="ltr">
@@ -10,9 +10,12 @@ session_start();
 	</head>
 	<body>
 		<h1>Schedule</h1>
+		<table>
+			
+		</table>
 <?php
 	// Attempt select query execution
-	$query = " SELECT final.idshift, final.fname, final.lname, create.date, create.time_start, create.time_end
+	$query = "SELECT final.idshift, final.fname, final.lname, create.date, create.time_start, create.time_end
 						 FROM final_shifts as final, created_shifts as create
 						 WHERE company_id = '".$_SESSION['company_id']."' and final.idshift = create.idshift ";
 	$stmt = $db->prepare($query);
