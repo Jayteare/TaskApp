@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <?php
 include("initiate_db.php");
-sesssion_start();
+session_start();
 ?>
 <html>
   <head>
-    <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+	  <title>Add Shift</title>
   </head>
   <body>
 	  <h1>Schedule</h1>
