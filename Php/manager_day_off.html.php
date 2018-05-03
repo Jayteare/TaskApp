@@ -38,7 +38,7 @@ $lname =  $_SESSION['lname'];
         </tr>
       <?php
   
-        $conn = new mysqli("localhost", "root", "", "462_schedule_project");
+        $conn = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
         if (!$conn) {
           die("Connection failed: " . mysqli_connect_error());
         }
