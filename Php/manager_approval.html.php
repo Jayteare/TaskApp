@@ -80,6 +80,6 @@
     }
     ?>
 
-    <a href="http://localhost/462Project/manager_homepage.html.php">Manager homepage</a>
+    <a href="https://taskingapplication.herokuapp.com/Php/manager_homepage.html.php">Manager homepage</a>
   </body>
 </html>
