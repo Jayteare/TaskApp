@@ -80,7 +80,7 @@
             <a href="create_new_manager.html.php" >Add New Manager</a>
           </li>
 	  <li>
-	    <a href="index.html">Logout</a>
+	    <a href="https://taskingapplication.herokuapp.com/Php/index.html.php">Logout</a>
 	  </li>
 		 
 	      </ul>
