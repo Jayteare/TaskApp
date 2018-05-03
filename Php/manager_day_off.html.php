@@ -53,7 +53,7 @@ $lname =  $_SESSION['lname'];
                        prerequest.Status
     
         FROM prerequest
-        WHERE (MFName = '$fname' AND MLName = '$lname' )AND (Status = 'Approved' OR Status = 'Delined') ";
+        WHERE (MFName = '$fname' AND MLName = '$lname' )AND (Status = 'Approved' OR Status = 'Declined') ";
     
     
     
