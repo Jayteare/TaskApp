@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
   session_start();
-  include("initiate_db.php");
   $fname =  $_SESSION['fname'];
   $lname =  $_SESSION['lname'];
   $username =   $_SESSION['cur_user'];
@@ -12,6 +11,9 @@
     $startShift = $_POST['Start_Shift'];
     $endShift = $_POST['End_Shift'];
     $reason = $_POST['reason'];
+    
+      $db = new mysqli('localhost', 'root', '', '462_schedule_project');
+
     $query = "INSERT INTO prerequest (Shift_ID, userName, MFName,MLName,EFName,ELName,StartShift,EndShift, Reason, Status)
               VALUES (?,?,?,?,?,?,?,?,?,?)";
     $stmt = $db->prepare($query);
