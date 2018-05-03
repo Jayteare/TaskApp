@@ -46,10 +46,7 @@ $lname =  $_SESSION['lname'];
       WHERE EFName = ('".$fname."' AND ELName = '".$lname."') AND (Status = 'Approve' OR Status = 'Decline')";
 
       $result = mysqli_query($conn, $sql);
-        
-        
-        <?php echo "number of data is" mysqli_num_rows($result) ?>
-        
+               
         
       if (mysqli_num_rows($result) > 0) {
       // output data of each row
