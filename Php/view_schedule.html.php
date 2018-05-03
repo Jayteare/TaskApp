@@ -18,7 +18,7 @@ session_start();
   $stmt->execute();
   $result = $stmt->fetchAll();
 ?>
-  	<table align='center'>
+  	<table>
       <tr>
 				<th>Shift ID</th>
     	  <th>First Name</th>
