@@ -12,15 +12,17 @@ session_start();
 		<h1>Schedule</h1>
 <?php
 	// Attempt select query execution
-	$query = "SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
-						 FROM  final_shifts , created_shifts
-						 WHERE final_shifts.idshift = created_shifts.idshift ";
+	$query = "SELECT COUNT(*), final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
+	          FROM (SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
+						      FROM  final_shifts, created_shifts
+						      WHERE final_shifts.idshift = created_shifts.idshift)";
 	$stmt = $db->prepare($query);
 	$stmt->execute();
 	$result = $stmt->fetchAll();
 ?>
 		<table>
 			<tr>
+				<th>Count</th>
 				<th>Shift ID</th>
 				<th>First Name</th>
 				<th>Last Name</th>
@@ -30,6 +32,7 @@ session_start();
 			</tr>
 <?php	foreach($result as $row){ ?>
 			<tr>
+				<td><?php echo $row['COUNT(*)']?></td>
 				<td><?php echo $row['final_shifts.idshift']?></td>
 				<td><?php echo $row['final_shifts.fname']?></td>
 				<td><?php echo $row['final_shifts.lname']?></td>
