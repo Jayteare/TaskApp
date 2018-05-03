@@ -43,26 +43,25 @@ $lname =  $_SESSION['lname'];
         $sql = "SELECT Shift_ID, EFName, ELName, StartShift, EndShift, Reason, Status FROM prerequest
       WHERE (EFName = '".$fname."' AND ELName = '".$lname."') AND (Status = 'Approve' OR Status = 'Decline')";
 
-      $result = mysqli_query($db, $sql);
-               
-        
-      if (mysqli_num_rows($result) > 0) {
-      // output data of each row
-        while($row = mysqli_fetch_assoc($result)) {
-      ?>
-          <tr>
-            <td> <?php echo  $row["Shift_ID"] ?> </td>
-            <td> <?php echo  $row["EFName"] ?> </td>
-            <td> <?php echo  $row["ELName"] ?> </td>
-            <td> <?php echo  $row["StartShift"] ?> </td>
-            <td> <?php echo  $row["EndShift"] ?> </td>
-            <td> <?php echo  $row["Reason"] ?> </td>
-            <td> <?php echo  $row["Status"] ?> </td>
-          </tr>
-          <br>
-          <?php
+          $stmt = $conn->prepare($sql);
+      $stmt->execute();
+      $stmt->store_result();
+      $stmt->bind_result($shift_ID, $EFName, $ELName, $StartShift, $EndShift, $Reason, $Status);      
+      if($stmt->num_rows > 0){
+      while($stmt->fetch()){
+          echo "<tr>";
+          echo "<td >".$shift_ID."</td>";
+          echo "<td >".$EFName."</td>";
+          echo "<td >".$ELName."</td>";
+          echo "<td >".$StartShift."</td>";
+          echo "<td >".$EndShift."</td>";
+          echo "<td >".$Reason."</td>";
+          echo "<td >".$Status."</td>";
+  
+          echo "</tr>";
         }
-        } else {
+      }
+       else {
         ?>
         <tr>
           <td colspan="7"><center> <?php echo "There is no request!!!" ?> </center></td>
