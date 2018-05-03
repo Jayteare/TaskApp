@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
+include 'initiate_db.php';
 
 $fname =  $_SESSION['fname'];
 $lname =  $_SESSION['lname'];
@@ -37,15 +38,12 @@ $lname =  $_SESSION['lname'];
           <th>Status</th>
         </tr>
       <?php
-      $conn = mysqli_connect('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
-      if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-      }
+     
       
         $sql = "SELECT Shift_ID, EFName, ELName, StartShift, EndShift, Reason, Status FROM prerequest
       WHERE EFName = ('".$fname."' AND ELName = '".$lname."') AND (Status = 'Approve' OR Status = 'Decline')";
 
-      $result = mysqli_query($conn, $sql);
+      $result = mysqli_query($db, $sql);
                
         
       if (mysqli_num_rows($result) > 0) {
