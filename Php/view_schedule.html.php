@@ -10,9 +10,6 @@ session_start();
 	</head>
 	<body>
 		<h1>Schedule</h1>
-		<table>
-
-		</table>
 <?php
 	// Attempt select query execution
 	$query = "SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
