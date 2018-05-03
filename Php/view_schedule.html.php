@@ -12,10 +12,7 @@ session_start();
 		<h1>Schedule</h1>
 <?php
 	// Attempt select query execution
-	$query = "SELECT COUNT(*), final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
-	          FROM (SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end
-						      FROM  final_shifts, created_shifts
-						      WHERE final_shifts.idshift = created_shifts.idshift) as x";
+	$query = "SELECT COUNT(*), idshift, fname, lname, date, time_start, time_end FROM (SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, created_shifts.time_start, created_shifts.time_end FROM  final_shifts, created_shifts WHERE final_shifts.idshift = created_shifts.idshift) AS x";
 	$stmt = $db->prepare($query);
 	$stmt->execute();
 	$result = $stmt->fetchAll();
