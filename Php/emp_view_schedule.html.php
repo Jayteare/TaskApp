@@ -20,7 +20,7 @@ include 'date_lookup.php';
 		</form>
 <?php
 	// Attempt select query execution
-	$query = "SELECT final_shifts.idshift, final_shifts.fname, final_shifts.lname, created_shifts.date, TIME_FORMAT(created_shifts.time_start, '%h:%i%p') as time_start, TIME_FORMAT(created_shifts.time_end, '%h:%i%p') as time_end
+	$query = "SELECT final_shifts.idshift, created_shifts.date, TIME_FORMAT(created_shifts.time_start, '%h:%i%p') as time_start, TIME_FORMAT(created_shifts.time_end, '%h:%i%p') as time_end
 					  FROM  final_shifts, created_shifts
 						WHERE final_shifts.username = '".$_SESSION['cur_user']."' && date >= '".$daterange[0]."' AND date <= '".$daterange[1]."' AND final_shifts.company_id = '".$_SESSION['company_id']."' && final_shifts.idshift = created_shifts.idshift";
 	$stmt = $db->prepare($query);
@@ -30,7 +30,6 @@ include 'date_lookup.php';
 		<table>
 			<tr>
 				<th>Shift ID</th>
-
 				<th>Day</th>
 				<th>Start Time</th>
 				<th>End Time</th>
@@ -38,8 +37,6 @@ include 'date_lookup.php';
 <?php	foreach($result as $row){ ?>
 			<tr>
 				<td><?php echo $row['idshift']?></td>
-				<td><?php echo $row['fname']?></td>
-				<td><?php echo $row['lname']?></td>
 				<td><?php echo $row['date']?></td>
 				<td><?php echo $row['time_start']?></td>
 				<td><?php echo $row['time_end']?></td>
