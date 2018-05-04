@@ -10,8 +10,7 @@ include 'date_lookup.php';
 		<title>View Schedule</title>
 	</head>
 	<body>
-		<h1>Schedule</h1>
-		<h3>Week of <?php echo date("F jS, Y", strtotime($daterange[0])) ?> to <?php echo date("F jS, Y", strtotime($daterange[1])) ?></h3>
+		<h3>Hello <?php echo $_SESSION['fname'] ?>, here is your schedule for the week of <?php echo date("F jS, Y", strtotime($daterange[0])) ?> to <?php echo date("F jS, Y", strtotime($daterange[1])) ?></h3>
 		<form action="462input_handler.php" method="post">
 			<div>
 				<label for="party">Choose your desired date to view:</label>
@@ -31,8 +30,7 @@ include 'date_lookup.php';
 		<table>
 			<tr>
 				<th>Shift ID</th>
-				<th>First Name</th>
-				<th>Last Name</th>
+
 				<th>Day</th>
 				<th>Start Time</th>
 				<th>End Time</th>
