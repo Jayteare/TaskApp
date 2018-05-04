@@ -98,7 +98,7 @@
               <div id="Demo1" class="w3-hide w3-container">
                 <p>Some text..</p>
               </div>
-              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/emp_view_schedule.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> View YourSchedule</button>
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/emp_view_schedule.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> View Your Schedule</button>
               <div id="Demo2" class="w3-hide w3-container">
                 <p>Some other text..</p>
               </div>
