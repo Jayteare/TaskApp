@@ -18,7 +18,7 @@
       <div>
         <label for="party">Choose your desired date to view:</label>
         <input type="date" id="shift_date_range" name="shift_date_range" required>
-        <input type="submit" name="shift_date_submit">
+        <input type="submit" name="shift_date_submit_empqueue">
       </div>
     </form>
     <!--

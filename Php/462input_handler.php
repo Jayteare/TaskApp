@@ -253,9 +253,19 @@
     header('Location:employee_newshift.html.php');
   }
   //Stores a selected datein $_SESSION for use in shiftlokup.php after employee_newshift.html.php is reached
-  if(isset($_POST['shift_date_submit'])){
+  if(isset($_POST['shift_date_submit_empqueue'])){
     $_SESSION['shift_date_display'] = $_POST['shift_date_range'];
     header('Location:employee_newshift.html.php');
+  }
+
+  if(isset($_POST['shift_date_submit_empview'])){
+    $_SESSION['shift_date_display'] = $_POST['shift_date_range'];
+    header('Location:emp_view_schedule.html.php');
+  }
+
+  if(isset($_POST['shift_date_submit_manview'])){
+    $_SESSION['shift_date_display'] = $_POST['shift_date_range'];
+    header('Location:view_schedule.html.php');
   }
 
   if(isset($_POST['add_shift_submit'])){

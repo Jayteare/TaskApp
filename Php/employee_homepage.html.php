@@ -11,7 +11,7 @@
     $startShift = $_POST['Start_Shift'];
     $endShift = $_POST['End_Shift'];
     $reason = $_POST['reason'];
-    
+
       $db = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
 
     $query = "INSERT INTO prerequest (Shift_ID, userName, MFName,MLName,EFName,ELName,StartShift,EndShift, Reason, Status)
@@ -98,7 +98,7 @@
               <div id="Demo1" class="w3-hide w3-container">
                 <p>Some text..</p>
               </div>
-              <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/emp_view_schedule.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> View YourSchedule</button>
               <div id="Demo2" class="w3-hide w3-container">
                 <p>Some other text..</p>
               </div>
