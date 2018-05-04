@@ -294,4 +294,19 @@
     //redirectig to the display page. In our case
     header("Location: create_shifts.html.php");
   }
+
+  if(isset($_POST['assign_shift_submit'])){
+    $selectedWorkers = $_POST['shiftAssign'];
+    $numSelected = count($selectedWorkers);
+
+    if($numSelected < $_SESSION['cur_shift_workers']){
+      $_SESSION['assignCreateErrorMsg']="You didn't select enough people!";
+      header('Location:assign_test_manage.html.php');
+    }else if($numSelected > $_SESSION['cur_shift_workers']){
+      $_SESSION['companyCreateErrorMsg']="You selected too many people!";
+      header('Location:assign_test_manage.html.php');
+    }else{
+
+    }
+  }
 ?>

@@ -10,7 +10,9 @@
   </head>
   <body>
 <?php
-$shiftquery = "SELECT * FROM created_shifts";
+$shiftquery = "SELECT *
+               FROM created_shifts
+               WHERE company_id = '".$_SESSION['company_id']."'";
 $shiftstmt = $db->prepare($shiftquery);
 $shiftstmt->execute();
 $shiftresult = $shiftstmt->fetchAll();
@@ -18,17 +20,15 @@ foreach($shiftresult as $shiftrow){
 $shiftname = "Shift ID: " . $shiftrow["idshift"] . " Day: " . $shiftrow["date"] . " Start Time: " . $shiftrow["time_start"] . " End Time: " . $shiftrow["time_end"] . " Number of Employees: " . $shiftrow["workers_needed"];
 echo $shiftname;
 echo "<br>";
-  $personquery = "SELECT * FROM queued_shifts WHERE idshift = '".$shiftrow['idshift']."' AND company_id = '".$_SESSION['company_id']."' ";
-  $personstmt = $db->prepare($personquery);
-  $personstmt->execute();
-  $personresult = $personstmt->fetchAll();
-  foreach($personresult as $personrow){
-    echo $personrow['username'];
-    echo "<br>";
-  }
-  echo "<br><br><br>";
 ?>
-
-<?php } ?>
+<form action="assign_test_page.html.php" method="post">
+  <input type="submit" name=" <?php echo $shiftrow["idshift"] ?>" value="Manage">
+</form>
+<?php
+  if(isset($_POST[$shiftrow["idshift"]])){
+    $_SESSION['cur_shift_manage'] = $shiftrow["idshift"];
+    header('Location:assign_test_manage.html.php');
+  }
+} ?>
   </body>
 </html>
