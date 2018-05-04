@@ -17,7 +17,6 @@ function weekStartEnd($week, $year)
 */
 if(isset($_SESSION['shift_date_display'])){
   $date = $_SESSION['shift_date_display'];
-  $_SESSION['shift_date_display'] = null;
 }else{
   $date = date("Y-m-d");
 }
