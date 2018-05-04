@@ -94,7 +94,7 @@
         $result = $stmt->fetchAll();
         foreach($result as $row){
           if($row['COUNT(*)'] > 0){
-            $query = "INSERT INTO employees VALUES ('".$_SESSION['new_employee_username']."', '".$_SESSION['new_employee_password']."', '".$_SESSION['new_employee_fname']."', '".$_SESSION['new_employee_lname']."', '".$_SESSION['new_employee_pin']."', '".$_SESSION['new_employee_email']."', '".$_SESSION['new_employee_phone']."')";
+            $query = "INSERT INTO employees VALUES ('".$_SESSION['new_employee_username']."', '".$_SESSION['new_employee_password']."', '".$_SESSION['new_employee_fname']."', '".$_SESSION['new_employee_lname']."', '".$_SESSION['new_employee_email']."', '".$_SESSION['new_employee_phone']."', '".$_SESSION['new_employee_pin']."')";
     	      $stmt = $db->prepare($query);
     	      $stmt->execute();
             $_SESSION['new_employee_username']=null;
@@ -150,7 +150,7 @@
         $result = $stmt->fetchAll();
         foreach($result as $row){
           if($row['COUNT(*)'] > 0){
-            $query = "INSERT INTO managers VALUES ('".$_SESSION['new_manager_username']."', '".$_SESSION['new_manager_password']."', '".$_SESSION['new_manager_fname']."', '".$_SESSION['new_manager_lname']."', '".$_SESSION['new_manager_pin']."', '".$_SESSION['new_manager_email']."', '".$_SESSION['new_manager_phone']."')";
+            $query = "INSERT INTO managers VALUES ('".$_SESSION['new_manager_username']."', '".$_SESSION['new_manager_password']."', '".$_SESSION['new_manager_fname']."', '".$_SESSION['new_manager_lname']."', '".$_SESSION['new_manager_email']."', '".$_SESSION['new_manager_phone']."', '".$_SESSION['new_manager_pin']."')";
     	      $stmt = $db->prepare($query);
     	      $stmt->execute();
             $_SESSION['new_manager_username']=null;
