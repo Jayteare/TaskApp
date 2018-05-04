@@ -44,9 +44,9 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-					<li><a href="#" data-nav-section="services"><span>Services</span></a></li>
-					<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
-					<li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
+					<li><a href="#fh5co-services" data-nav-section="services"><span>Services</span></a></li>
+					<li><a href="#fh5co-team" data-nav-section="team"><span>Team</span></a></li>
+					<li><a href="#fh5co-faq" data-nav-section="faq"><span>FAQ</span></a></li>
 					<li class="call-to-action"><a class="sign-up" href="registration.html.php"><span>Register</span></a></li>
 					<li class="call-to-action"><a class="log-in" href="index.html.login.php"><span>Login</span></a></li>
 				</ul>
