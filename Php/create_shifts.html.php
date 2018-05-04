@@ -4,7 +4,7 @@
 session_start();
 include("initiate_db.php");
 
-$query = "SELECT idshift, date, time_start, time_end, workers_needed
+$query = "SELECT idshift, date, TIME_FORMAT(time_start, '%h:%i%p') as time_start, TIME_FORMAT(time_end, '%h:%i%p') as time_end, workers_needed
           FROM created_shifts
           WHERE company_id = '".$_SESSION['company_id']."'
           ORDER BY date ASC, time_start ASC";
