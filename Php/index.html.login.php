@@ -21,21 +21,21 @@
 	<link rel="stylesheet" href="css/css/bootstrap.css">
 	<!-- Style -->
 	<link rel="stylesheet" href="css/css/style.css">
-	
+
 	<style>
-	
+
 	.container
 	{
 		padding: 100px;
 		text-align: center!important;
 		border 3px solid green!important;
-		
+
 		font-weight:normal!important;
 		font-family: Arial, Helvetica, sans-serif!important;
 	}
-	
+
 	</style>
-	
+
 </head>
 
 <header role="banner" id="fh5co-header">
@@ -44,7 +44,7 @@
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="" href="#">TaskerApp</a> 
+				<a class="" href="#">TaskerApp</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -61,17 +61,17 @@
 </header>
 
 <body>
-	
+
 	<div class="container">
 		<section>
 			<div class="panel panel-default top caja">
 			  <div class="panel-body">
 				<h3 class="text-center">Login</h3>
-				
-				<form>
+
+				<form action="462input_handler.php" method="post">
 					<div class="input-group input-group-lg">
 					  <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-					  <input type="email" name="email" id="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon1" required>
+					  <input type="text" name="username" id="username" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" required>
 					</div>
 					<br>
 					<div class="input-group input-group-lg">
@@ -79,14 +79,14 @@
 					  <input type="password" name="password" id="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1" required>
 					</div>
 					<br>
-					 <button type="submit" class="btn btn-primary btn-block">Submit</button>
+					 <button type="submit" name="login_submit" class="btn btn-primary btn-block">Submit</button>
 
 				</form>
 			  </div>
 			</div>
 		</section>
 	</div>
-	
+
 
 	</body>
 </html>
