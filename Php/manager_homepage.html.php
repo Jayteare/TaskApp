@@ -63,7 +63,7 @@
 	        	<a href="create_shifts.html.php">Create Shifts</a>
 	        </li>
           <li>
-		        <a href="manager_assign_shifts.html.php">Assign Shifts</a>
+		        <a href="assign_test_page.html.php">Assign Shifts</a>
 	        </li>
           <li>
 		        <a href="view_schedule.html.php">View Weekly Schedule</a>
