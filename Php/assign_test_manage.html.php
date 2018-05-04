@@ -27,7 +27,7 @@
   $personresult = $personstmt->fetchAll();
 ?>
     <h1>Shift Assign</h1>
-    <h5>Please select <?php echo $_SESSION['cur_shift_workers'] ?> individuals.</h5>
+    <h5>Please select <?php echo $_SESSION['cur_shift_workers'] ?> individual(s).</h5>
     <form action="462input_handler.php" method="post">
 <?php
   foreach($personresult as $personrow){

@@ -306,7 +306,24 @@
       $_SESSION['companyCreateErrorMsg']="You selected too many people!";
       header('Location:assign_test_manage.html.php');
     }else{
-
+      foreach($selectedWorkers as $value){
+        $query = "SELECT fname, lname FROM employees WHERE username = '".$value."'";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        foreach($result as $row){
+          $fname = $row['fname'];
+          $lname = $row['lname'];
+        }
+        $query = "INSERT INTO final_shifts VALUES('".$_SESSION['cur_shift_manage']."', '".$_SESSION['company_id']."', '".$value."', '".$fname."', '".$lname."')";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+	    }
+      $query = "DELETE FROM queued_shifts WHERE idshift = '".$_SESSION['cur_shift_manage']."'";
+      $stmt = $db->prepare($query);
+      $stmt->execute();
+      $_SESSION['cur_shift_manage'] = null;
+      header('Location:assign_test_page.html.php');
     }
   }
 ?>
