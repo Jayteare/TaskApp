@@ -4,7 +4,11 @@
 session_start();
 include("initiate_db.php");
 
-$query = "SELECT idshift, date, time_start, time_end, workers_needed FROM created_shifts WHERE company_id = '".$_SESSION['company_id']."'";
+$query = "SELECT idshift, date, time_start, time_end, workers_needed
+          FROM created_shifts
+          WHERE company_id = '".$_SESSION['company_id']."'
+          ORDER BY date ASC, time_start ASC";
+
 $stmt = $db->prepare($query);
 $stmt->execute();
 $result = $stmt->fetchAll();
