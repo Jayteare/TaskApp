@@ -9,7 +9,7 @@
 <head>
 
 	<!--  App Title  -->
-	<title>ScheduleMi - Free Scheduling Application</title>
+	<title>Log-In</title>
 	<!--  App Description  -->
 	<meta name="description" content=""/>
 	<meta charset="utf-8">

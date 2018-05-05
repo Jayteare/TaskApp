@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<!--  App Title  -->
-		<title>TaskApp - Free Tasking Application</title>
+		<title>Manager Creation</title>
 		<!--  App Description  -->
 		<meta name="description" content=""/>
 		<meta charset="utf-8">
