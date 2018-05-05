@@ -29,8 +29,9 @@ echo "<br>";
 <?php
   if(isset($_POST[$shiftrow["idshift"]])){
     $_SESSION['cur_shift_manage'] = $shiftrow["idshift"];
-    header('Location:assign_test_manage.html.php');
-  }
+    ?>
+    <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+  <?php }
 } ?>
   </body>
 </html>
