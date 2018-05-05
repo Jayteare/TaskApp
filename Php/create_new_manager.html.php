@@ -246,7 +246,7 @@ padding: 30px;
     </div>
     <!-- Page Container -->
     <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
-			<form action="462input_handler.php" method="post" style="border:1px solid #ccc">
+			<form action="462input_handler.php" method="post">
 				<div class="row">
 					<div class="column">
 						<h1>Manager Enrollment</h1>
@@ -282,7 +282,7 @@ padding: 30px;
 						<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
 						<div class="clearfix">
-							<button type="button" onclick="location.href = 'manager_homepage.html.php';" class="cancelbtn">Cancel</button>
+							<button type="button" onclick="location.href = 'manager_homepage.html.php';" class="signupbtn">Cancel</button>
 							<button type="submit" name="create_manager_submit" class="signupbtn">Sign Up</button>
 						</div>
 					</div>
