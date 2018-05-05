@@ -398,8 +398,9 @@
       <?php
   		    if(isset($_POST[$row['idshift']])){
   			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
+            ?>
+            <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+  			  <?php }
   		  }
   		?>
       </div>
