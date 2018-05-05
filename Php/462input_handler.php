@@ -108,15 +108,15 @@
             $_SESSION['new_employee_email']=null;
             $_SESSION['new_employee_phone']=null;
             $_SESSION['employeeCreateErrorMsg']=null;
-    	      header('Location:index.html.php');
+    	      header('Location:index.html.login.php');
           }else{
             $_SESSION['employeeCreateErrorMsg']="Your PIN must be valid!";
-            header('Location:create_new_employee.html.php');
+            header('Location:registration.html.php');
           }
         }
       }else{
         $_SESSION['employeeCreateErrorMsg']="Your Username must be unique!";
-        header('Location:create_new_employee.html.php');
+        header('Location:registration.html.php');
       }
     }
   }
@@ -233,12 +233,12 @@
             $_SESSION['new_owner_pin']=null;
             $_SESSION['new_owner_email']=null;
             $_SESSION['new_owner_phone']=null;
-            header('Location:index.html.php');
+            header('Location:index.html.login.php');
           }
         }
       }else{
         $_SESSION['companyCreateErrorMsg']="Your company name must be unique!";
-        header('Location:create_new_company.html.php');
+        header('Location:registration.html.php');
       }
     }
   }
