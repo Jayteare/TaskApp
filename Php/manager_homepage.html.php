@@ -278,9 +278,9 @@ padding: 30px;
 
               <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/view_schedule.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> View Weekly Schedule</button>
 
-              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/manager_day_off.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Approve Days Off</button>
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/manager_approval.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Approve Days Off</button>
 
-              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/manager_approval.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Approved Day-Off Requests</button>
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/manager_day_off.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Approved Day-Off Requests</button>
 
         </div>
       </div>
