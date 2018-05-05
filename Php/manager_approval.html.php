@@ -306,7 +306,7 @@ padding: 30px;
             }
           }
           else{
-            echo "<td colspan = 8><center><h2> There is no request!!!!</h2></center> </td>";
+            echo "<td colspan = 8><center><h2> There are no requests pending approval.</h2></center> </td>";
           }
           ?>
 
