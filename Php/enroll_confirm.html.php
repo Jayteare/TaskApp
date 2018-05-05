@@ -14,9 +14,6 @@
       462input_handler.php then takes the user's "username" and the "idshift" of the selected shift
       from $_SESSION and stores them in the queued_shifts table.
     -->
-<?php if($countNum > 0){?>
-    You've already enrolled in this shift!
-    <?php}else{ ?>
     <div class="shift-body">
       Confirming enrollment in shift:<br><br>
       <?php
@@ -30,7 +27,6 @@
     </div>
     <?php
         }
-      }
     ?>
   </body>
 </html>
