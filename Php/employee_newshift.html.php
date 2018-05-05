@@ -213,6 +213,129 @@
 		padding: 30px;
 	}
 
+  .title-body{
+  font-weight: bold;
+
+}
+
+.shift-body{
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 8px 3px;
+}
+
+.shift-screen-area{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15% 85%;
+  grid-row-gap: 2px;
+}
+
+.shift-button{
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.sunday-title{
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.sunday-body{
+  grid-row: 2;
+  grid-column: 1;
+
+}
+
+.monday-title{
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.monday-body{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.tuesday-title{
+  grid-row: 1;
+  grid-column: 3;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.tuesday-body{
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.wednesday-title{
+  grid-row: 1;
+  grid-column: 4;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.wednesday-body{
+  grid-row: 2;
+  grid-column: 4;
+}
+
+.thursday-title{
+  grid-row: 1;
+  grid-column: 5;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.thursday-body{
+  grid-row: 2;
+  grid-column: 5;
+}
+
+.friday-title{
+  grid-row: 1;
+  grid-column: 6;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.friday-body{
+  grid-row: 2;
+  grid-column: 6;
+}
+
+.saturday-title{
+  grid-row: 1;
+  grid-column: 7;
+  justify-self: center;
+  padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.saturday-body{
+  grid-row: 2;
+  grid-column: 7;
+}
+
 	</style>
 
   </head>
