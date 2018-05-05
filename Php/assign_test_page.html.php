@@ -267,7 +267,7 @@ padding: 30px;
         if(isset($_POST[$shiftrow["idshift"]])){
           $_SESSION['cur_shift_manage'] = $shiftrow["idshift"];
           ?>
-          <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+          <script>window.location = "https://taskingapplication.herokuapp.com/Php/assign_test_manage.html.php";</script>
         <?php }
       } ?>
 
