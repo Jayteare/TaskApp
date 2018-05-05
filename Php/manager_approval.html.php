@@ -248,7 +248,7 @@ padding: 30px;
     <!-- Page Container -->
     <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
 
-          <table style = "width:50%"  >
+          <table>
             <tr>
               <th>Shift_ID</th>
               <th>First Name</th>
