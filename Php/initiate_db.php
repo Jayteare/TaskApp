@@ -4,6 +4,7 @@ define("HOST", "us-cdbr-iron-east-05.cleardb.net:3306");
 define("USER", "b52e20d0f5da46");
 define("PASS", "fc4f25b0");
 define("NAME", "heroku_0188da0de4a5cfa");
+date_default_timezone_set('America/Los_Angeles');
 if (get_magic_quotes_gpc())
 {
   function stripslashes_deep($value)

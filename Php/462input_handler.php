@@ -7,17 +7,17 @@
 	  $username=$_POST['username'];
     $password=$_POST['password'];
     //Query to check if User/Pass combo is in Employee table
-    $empquery = "SELECT COUNT(*), username, password, fname, lname, company_pin FROM (SELECT username, password, fname, lname, company_pin FROM employees WHERE username = '".$username."' && password = '".$password."') AS x";
+    $empquery = "SELECT COUNT(*), username, password, fname, lname, email, company_pin FROM (SELECT username, password, fname, lname, email, company_pin FROM employees WHERE username = '".$username."' && password = '".$password."') AS x";
     $empstmt = $db->prepare($empquery);
     $empstmt->execute();
     $empresult = $empstmt->fetchAll();
     //Query to check if User/Pass combo is in Manager table
-    $manquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
+    $manquery = "SELECT COUNT(*), username, password, fname, lname, email, company_id FROM (SELECT username, password, fname, lname, email, company_id FROM managers WHERE username = '".$username."' && password = '".$password."') AS x";
     $manstmt = $db->prepare($manquery);
     $manstmt->execute();
     $manresult = $manstmt->fetchAll();
 
-    $ownerquery = "SELECT COUNT(*), username, password, fname, lname, company_id FROM (SELECT username, password, fname, lname, company_id FROM owners WHERE username = '".$username."' && password = '".$password."') AS x";
+    $ownerquery = "SELECT COUNT(*), username, password, fname, lname, email, company_id FROM (SELECT username, password, fname, lname, email, company_id FROM owners WHERE username = '".$username."' && password = '".$password."') AS x";
     $ownerstmt = $db->prepare($ownerquery);
     $ownerstmt->execute();
     $ownerresult = $ownerstmt->fetchAll();
@@ -31,6 +31,7 @@
         $_SESSION['cur_user'] = $emprow['username'];
         $_SESSION['fname'] = $emprow['fname'];
         $_SESSION['lname'] = $emprow['lname'];
+        $_SESSION['email'] = $emprow['email'];
         $_SESSION['company_id'] = $emprow['company_pin'];
         $_SESSION['role'] = "Employee";
         header('Location:employee_homepage.html.php');
@@ -40,6 +41,7 @@
             $_SESSION['cur_user'] = $manrow['username'];
             $_SESSION['fname'] = $manrow['fname'];
             $_SESSION['lname'] = $manrow['lname'];
+            $_SESSION['email'] = $manrow['email'];
             $_SESSION['company_id'] = $manrow['company_id'];
             $_SESSION['role'] = "Manager";
             header('Location:manager_homepage.html.php');
@@ -49,6 +51,7 @@
                 $_SESSION['cur_user'] = $ownerrow['username'];
                 $_SESSION['fname'] = $ownerrow['fname'];
                 $_SESSION['lname'] = $ownerrow['lname'];
+                $_SESSION['email'] = $ownerrow['email'];
                 $_SESSION['company_id'] = $ownerrow['company_id'];
                 $_SESSION['role'] = "Owner";
                 header('Location:manager_homepage.html.php');
