@@ -253,8 +253,9 @@ padding: 30px;
           <!-- Profile -->
           <div class="w3-card w3-round w3-white">
             <div class="w3-container">
-              <h4 class="w3-center"><?php echo $_SESSION['fname'] ?> <?php echo $_SESSION['lname']; ?>.</h4>
+              <h4 class="w3-center"><?php echo $_SESSION['fname'] ?> <?php echo $_SESSION['lname']; ?></h4>
               <hr>
+              <p><i class="fa fa-fw w3-margin-right w3-text-theme"></i><?php echo $_SESSION['email'] ?> </p>
               <?php
               $query = "SELECT name FROM company WHERE idcompany = '".$_SESSION['company_id']."'";
               $stmt = $db->prepare($query);
@@ -262,9 +263,9 @@ padding: 30px;
               $result = $stmt->fetchAll();
               foreach($result as $row){
               ?>
-              <p><i class="fa fa-fw w3-margin-right w3-text-theme"></i><?php echo $row['name'] ?> </p>
+              <p><i class="fa fa-fw w3-margin-right w3-text-theme"></i>Company Name: <b><?php echo $row['name'] ?></b </p>
               <?php } ?>
-              <p><i class="fa fa-fw w3-margin-right w3-text-theme"></i><?php echo $_SESSION['email'] ?> </p>
+
             </div>
           </div>
           <br>
