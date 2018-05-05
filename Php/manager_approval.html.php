@@ -291,23 +291,26 @@ padding: 30px;
 
           if($stmt->num_rows > 0){
           while($stmt->fetch()){
-              echo "<tr>";
-              echo "<td >".$shift_ID."</td>";
-              echo "<td >".$EFName."</td>";
-              echo "<td >".$ELName."</td>";
-              echo "<td >".$StartShift."</td>";
-              echo "<td >".$EndShift."</td>";
-              echo "<td >".$Reason."</td>";
-              echo "<td >".$Status."</td>";
-              echo "<td><a href='approve.php?id=".$ID."'>$buttonName1</a></td>";
-              echo "<td><a href='decline.php?id=".$ID."'>$buttonName2</a></td>";
+          ?>
+              <tr>
+              <td><?php echo $shift_ID ?></td>
+              <td><?php echo $EFName ?></td>
+              <td><?php echo $ELName ?></td>
+              <td><?php echo $StartShift ?></td>
+              <td><?php echo $EndShift ?></td>
+              <td><?php echo $Reason ?></td>
+              <td><?php echo $Status ?></td>
+              <td><a href='approve.php?id="<?php echo $ID ?>"'><?php echo $buttonName1 ?></a></td>
+              <td><a href='decline.php?id="<?php echo $ID ?>"'><?php echo $buttonName2 ?></a></td>
 
-              echo "</tr>";
+              </tr>
+          <?php
             }
           }
           else{
-            echo "<td colspan = 8><center><h2> There are no requests pending approval.</h2></center> </td>";
-          }
+            ?>
+            <td colspan = 8><center><h2> There are no requests pending approval.</h2></center> </td>
+        <?php }
           ?>
 
         <!-- End Page Container -->
