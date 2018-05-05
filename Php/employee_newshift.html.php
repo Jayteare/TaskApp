@@ -214,17 +214,15 @@
 	}
 
   .title-body{
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
 
 }
 
 .shift-body{
-  border: 2px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
-  background: rgb(149, 194, 215);
   padding: 8px 3px;
-  font-size: 20px;
 }
 
 .shift-screen-area{
@@ -236,7 +234,7 @@
 
 .shift-button{
   border-radius: 25px;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -245,7 +243,7 @@
   grid-column: 1;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
@@ -260,7 +258,7 @@
   grid-column: 2;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
@@ -274,7 +272,7 @@
   grid-column: 3;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
@@ -288,7 +286,7 @@
   grid-column: 4;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
@@ -302,7 +300,7 @@
   grid-column: 5;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
@@ -316,7 +314,7 @@
   grid-column: 6;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
@@ -330,7 +328,7 @@
   grid-column: 7;
   justify-self: center;
   padding: 5px 5px;
-  border: 3px solid black;
+  border: 1px solid #dddddd;
   border-radius: 25px;
 }
 
