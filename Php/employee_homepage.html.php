@@ -111,6 +111,7 @@ height:100px!important;
 table, th, td
 {
 border-style:none!important;
+padding:0 15px 0 15px;
 }
 
 .day-body

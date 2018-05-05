@@ -8,7 +8,7 @@
   $username =   $_SESSION['cur_user'];
 ?>
 <html>
-<title>Employee Homepage</title>
+<title>View Your Schedule</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/css/request.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,6 +85,7 @@ height:100px!important;
 table, th, td
 {
 border-style:none!important;
+padding:0 15px 0 15px;
 }
 
 .day-body
