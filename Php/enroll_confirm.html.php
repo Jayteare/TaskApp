@@ -262,6 +262,9 @@ padding: 30px;
         <form action="462input_handler.php" method="post">
           <input class= "shift-button" type="submit" name="shift_enroll_confirmation" value="Confirm"><br><br>
         </form>
+        <form action="462input_handler.php" method="post">
+          <input class= "shift-button" type="submit" name="shift_enroll_cancel" value="Cancel"><br><br>
+        </form>
       </div>
       <?php
           }
