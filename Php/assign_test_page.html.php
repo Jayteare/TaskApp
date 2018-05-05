@@ -13,8 +13,7 @@
 $shiftquery = "SELECT T1.company_id, T1.idshift, date, TIME_FORMAT(time_start, '%h:%i%p') as time_start, TIME_FORMAT(time_end, '%h:%i%p') as time_end, workers_needed, date
                FROM created_shifts T1
                  LEFT JOIN final_shifts T2 ON T1.idshift = T2.idshift
-               WHERE T1.company_id = '".$_SESSION['company_id']."' AND T2.idshift IS NULL
-               ORDER BY date ASC, time_start ASC";
+               WHERE T1.company_id = '".$_SESSION['company_id']."' AND T2.idshift IS NULL";
 $shiftstmt = $db->prepare($shiftquery);
 $shiftstmt->execute();
 $shiftresult = $shiftstmt->fetchAll();
