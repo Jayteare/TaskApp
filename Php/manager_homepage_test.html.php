@@ -5,33 +5,7 @@
   $fname =  $_SESSION['fname'];
   $lname =  $_SESSION['lname'];
   $username =   $_SESSION['cur_user'];
-  if(isset($_POST['request_submit'])){
-    $shift_ID = $_POST['Shift_ID'];
-    $manager_first_name = $_POST['manager_first_name'];
-    $manager_last_name = $_POST['manager_last_name'];
-    $startShift = $_POST['Start_Shift'];
-    $endShift = $_POST['End_Shift'];
-    $reason = $_POST['reason'];
 
-      $dbs = new mysqli('us-cdbr-iron-east-05.cleardb.net:3306', 'b52e20d0f5da46', 'fc4f25b0', 'heroku_0188da0de4a5cfa');
-
-    $query = "INSERT INTO prerequest (Shift_ID, userName, MFName,MLName,EFName,ELName,StartShift,EndShift, Reason, Status)
-              VALUES (?,?,?,?,?,?,?,?,?,?)";
-    $stmt = $dbs->prepare($query);
-    $stmt->bind_param('dsssssssss',
-                      $shift_ID,
-                      $username,
-                      $manager_first_name,
-                      $manager_last_name ,
-                      $fname,
-                      $lname,
-                      $startShift ,
-                      $endShift,
-                      $reason,
-                      $Status = "Pending");
-    $stmt->execute();
-    header('Location:https://taskingapplication.herokuapp.com/Php/employee_homepage.html.php');
-  }
 ?>
 <html>
 <title>Employee Homepage</title>
@@ -296,51 +270,16 @@ padding: 30px;
           <!-- Accordion -->
           <div class="w3-card w3-round">
             <div class="w3-white">
-              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/employee_newshift.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Enroll in Shifts</button>
-              <div id="Demo1" class="w3-hide w3-container">
-                <p>Some text..</p>
-              </div>
-              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/emp_view_schedule.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> View Your Schedule</button>
-              <div id="Demo2" class="w3-hide w3-container">
-                <p>Some other text..</p>
-              </div>
-              <button onclick="document.getElementById('id01').style.display='block'"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Request day off</button>
-              <div id="id01" class="modal">
-                <form class="modal-content animate" action="employee_homepage.html.php" method = "post">
-                  <div class="container">
-                    <table style = "width:80%" border="0">
-                      <tr>
-                        <td><label for="Shift_ID"><b>Shift_ID  </b></label></td>
-                        <td><input type="text" placeholder="Enter the shift ID" name="Shift_ID" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for = "mangerfirstname"> <b>Manager first name </b> </label></td>
-                        <td><input type = "text" placeholder = "Enter manager first name" name = "manager_first_name" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for = "mangerlastname"> <b>Manager last name </b> </label></td>
-                        <td><input type = "text" placeholder = "Enter manager last name" name = "manager_last_name" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for = "StartShift"> <b>Start shift </b> </label></td>
-                        <td><input type = "time"  name = "Start_Shift" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for = "EndShift"> <b>End shift </b> </label></td>
-                        <td><input type = "time"  name = "End_Shift" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for="Reason"><b>Reason  </b></label></td>
-                        <td><input type="text" placeholder="Enter reason..." name="reason" required></td>
-                      </tr>
-                    </table>
-                    <button type="submit" class= "submitbtn" name ="request_submit">Submit</button>
-                  </div>
-                  <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                  </div>
-                </form>
-              </div>
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/create_shifts.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Create Shifts</button>
+
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/assign_test_page.html.php';" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Assign Shifts</button>
+
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/view_schedule.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> View Weekly Schedule</button>
+
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/manager_day_off.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Approve Days Off</button>
+
+              <button onclick="location.href = 'https://taskingapplication.herokuapp.com/Php/manager_approval.html.php';"  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Approved Day-Off Requests</button>
+
         </div>
       </div>
       <br>
