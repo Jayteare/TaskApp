@@ -9,7 +9,7 @@
 <head>
 
 	<!--  App Title  -->
-	<title>TaskApp - Free Tasking Application</title>
+	<title>ScheduleMi - Free Scheduling Application</title>
 	<!--  App Description  -->
 	<meta name="description" content=""/>
 	<meta charset="utf-8">
@@ -44,7 +44,7 @@
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="" href="#">TaskerApp</a>
+				<a class="" href="#">ScheduleMi</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
