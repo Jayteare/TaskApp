@@ -421,13 +421,14 @@
           </form>
         </div>
         <br>
-      <?php
-  		    if(isset($_POST[$row['idshift']])){
-  			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
-  		  }
-  		?>
+        <?php
+    		    if(isset($_POST[$row['idshift']])){
+    			    $_SESSION['shift_enroll_id'] = $row['idshift'];
+              ?>
+              <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+    			  <?php }
+    		  }
+    		?>
       </div>
       <!-- Tuesday. -->
       <div class="tuesday-title">
@@ -446,13 +447,14 @@
           </form>
         </div>
         <br>
-      <?php
-  		    if(isset($_POST[$row['idshift']])){
-  			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
-  		  }
-  		?>
+        <?php
+    		    if(isset($_POST[$row['idshift']])){
+    			    $_SESSION['shift_enroll_id'] = $row['idshift'];
+              ?>
+              <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+    			  <?php }
+    		  }
+    		?>
       </div>
       <!-- Wednesday. -->
       <div class="wednesday-title">
@@ -471,13 +473,14 @@
           </form>
         </div>
         <br>
-      <?php
-  		    if(isset($_POST[$row['idshift']])){
-  			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
-  		  }
-  		?>
+        <?php
+    		    if(isset($_POST[$row['idshift']])){
+    			    $_SESSION['shift_enroll_id'] = $row['idshift'];
+              ?>
+              <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+    			  <?php }
+    		  }
+    		?>
       </div>
       <!-- Thursday. -->
       <div class="thursday-title">
@@ -496,13 +499,14 @@
           </form>
         </div>
         <br>
-      <?php
-  		    if(isset($_POST[$row['idshift']])){
-  			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
-  		  }
-  		?>
+        <?php
+    		    if(isset($_POST[$row['idshift']])){
+    			    $_SESSION['shift_enroll_id'] = $row['idshift'];
+              ?>
+              <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+    			  <?php }
+    		  }
+    		?>
       </div>
       <!-- Friday. -->
       <div class="friday-title">
@@ -521,13 +525,14 @@
           </form>
         </div>
         <br>
-      <?php
-  		    if(isset($_POST[$row['idshift']])){
-  			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
-  		  }
-  		?>
+        <?php
+    		    if(isset($_POST[$row['idshift']])){
+    			    $_SESSION['shift_enroll_id'] = $row['idshift'];
+              ?>
+              <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+    			  <?php }
+    		  }
+    		?>
       </div>
       <!-- Saturday. -->
       <div class="saturday-title">
@@ -546,13 +551,14 @@
           </form>
         </div>
         <br>
-      <?php
-  		    if(isset($_POST[$row['idshift']])){
-  			    $_SESSION['shift_enroll_id'] = $row['idshift'];
-  				  header('Location:https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php');
-  			  }
-  		  }
-  		?>
+        <?php
+    		    if(isset($_POST[$row['idshift']])){
+    			    $_SESSION['shift_enroll_id'] = $row['idshift'];
+              ?>
+              <script>window.location = "https://taskingapplication.herokuapp.com/Php/enroll_confirm.html.php";</script>
+    			  <?php }
+    		  }
+    		?>
       </div>
     </div>
   </body>
