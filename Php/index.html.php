@@ -9,7 +9,7 @@
 <html lang="en-us">
 <head>
 	<!--  App Title  -->
-	<title>TaskApp - Free Tasking Application</title>
+	<title>ScheduleMi - Free Scheduling Application</title>
 	<!--  App Description  -->
 	<meta name="description" content=""/>
 	<meta charset="utf-8">
@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 		<!-- <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -39,7 +39,7 @@
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="" href="#">TaskerApp</a> 
+				<a class="" href="#">ScheduleMi</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -54,8 +54,8 @@
 		</nav>
 	</div>
 </header>
-			
-			
+
+
 <section id="fh5co-home" data-section="home" style="background-image: url(https://psddd.co/wp-content/uploads/2017/04/iphone-6-ux-workflow.jpg);" data-stellar-background-ratio="0.5">
 	<div class="gradient"></div>
 	<div class="container">
@@ -63,11 +63,8 @@
 			<div class="text-inner">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
-						<h1 class="to-animate">Welcome to <span>TaskerApp</span></h1>
+						<h1 class="to-animate">Welcome to <span>ScheduleMi</span></h1>
 						<h2 class="to-animate">Where scheduling is made easier.</h2>
-						<div class="call-to-action">
-							<a href="#" class="download to-animate"><i class="icon-download"></i> Download</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -176,7 +173,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 		<div class="getting-started getting-started-1">
 		<div class="getting-grid" style="background-image:  url(css/images/full_image_3.jpg);">
 			<div class="desc">
@@ -190,7 +187,7 @@
 			</div>
 		</a>
 	</div>
-	
+
 		<section id="fh5co-team" class="fh5co-bg-color" data-section="team">
 		<div class="fh5co-team">
 			<div class="container">
@@ -240,7 +237,7 @@
 					<div class="col-md-4">
 						<div class="team-box text-center to-animate-2">
 							<div class="user"><img class="img-reponsive" src="css/images/person3.jpg" alt="Roger Garfield"></div>
-							<h3>Connor O'Donnel</h3>
+							<h3>Connor O'Donnell</h3>
 							<span class="position">Awesome Developer</span>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							<ul class="social-media">
@@ -289,7 +286,7 @@
 				<div class="col-md-4">
 					<div class="team-box text-center to-animate-2">
 						<div class="user"><img class="img-reponsive" src="css/images/person3.jpg" alt="Roger Garfield"></div>
-						<h3>Binh</h3>
+						<h3>Binh Lam</h3>
 						<span class="position">Awesome Developer</span>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 						<ul class="social-media">
@@ -301,11 +298,11 @@
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</section>
-	
+
 		<section id="fh5co-faq" class="fh5co-bg-color" data-section="faq">
 		<div class="fh5co-faq">
 			<div class="container">
@@ -324,7 +321,7 @@
 						<div class="box-faq to-animate-2">
 							<i class="icon-check2"></i>
 							<div class="desc">
-								<h3>What is TaskerApp?</h3>
+								<h3>What is ScheduleMi?</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							</div>
 						</div>
@@ -338,7 +335,7 @@
 						<div class="box-faq to-animate-2">
 							<i class="icon-check2"></i>
 							<div class="desc">
-								<h3>How do I use TaskerApps features?</h3>
+								<h3>How do I use ScheduleMi's features?</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							</div>
 						</div>
@@ -362,7 +359,7 @@
 						<div class="box-faq to-animate-2">
 							<i class="icon-check2"></i>
 							<div class="desc">
-								<h3>Is TaskerApp free?</h3>
+								<h3>Is ScheduleMi free?</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 							</div>
 						</div>
@@ -371,7 +368,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<footer>
 		<p>Team TaskerApp</p>
 	</footer>
